@@ -25,14 +25,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/ques_one"
-                android:textSize="40sp" />
+                android:textSize="35sp" />
 
             <TextView
                 android:id="@+id/quesOne"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="1"
-                android:textSize="40sp" />
+                android:textSize="35sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -45,14 +45,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/ques_two"
-                android:textSize="40sp" />
+                android:textSize="35sp" />
 
             <TextView
                 android:id="@+id/quesTwo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="1"
-                android:textSize="40sp" />
+                android:textSize="35sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -65,14 +65,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/ques_three"
-                android:textSize="40sp" />
+                android:textSize="35sp" />
 
             <TextView
                 android:id="@+id/quesThree"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="1"
-                android:textSize="40sp" />
+                android:textSize="35sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -85,14 +85,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/ques_four"
-                android:textSize="40sp" />
+                android:textSize="35sp" />
 
             <TextView
                 android:id="@+id/quesFour"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="1"
-                android:textSize="40sp" />
+                android:textSize="35sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -105,14 +105,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/ques_five"
-                android:textSize="40sp" />
+                android:textSize="35sp" />
 
             <TextView
                 android:id="@+id/quesFive"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="1"
-                android:textSize="40sp" />
+                android:textSize="35sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -132,7 +132,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="1"
-                android:textSize="40sp" />
+                android:textSize="35sp" />
         </LinearLayout>
     </LinearLayout>
 
@@ -151,9 +151,10 @@
 
             <Button
                 android:id="@+id/oneButton"
-                android:text="1"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent"
+                android:text="1"
+                android:background="@color/black"/>
 
             <Button
                 android:id="@+id/twoButton"
@@ -219,7 +220,7 @@
                 android:id="@+id/nineButton"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="9"/>
+                android:text="9" />
 
             <Button
                 android:id="@+id/tenButton"
@@ -232,7 +233,7 @@
                 android:id="@+id/elevenButton"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="11"/>
+                android:text="11" />
 
             <Button
                 android:id="@+id/twelveButton"
