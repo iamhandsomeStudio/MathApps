@@ -15,12 +15,6 @@
         android:layout_weight="1"
         android:orientation="vertical">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/question"
-            android:textSize="40sp" />
-
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -166,7 +160,7 @@
                 android:text="2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                style="@style/buttonMargin"/>
+                style="@style/buttonMargin" />
 
             <Button
                 android:id="@+id/threeButton"
@@ -179,7 +173,7 @@
                 android:text="4"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                style="@style/buttonMargin"/>
+                style="@style/buttonMargin" />
         </LinearLayout>
 
         <LinearLayout
@@ -199,7 +193,7 @@
                 android:text="6"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                style="@style/buttonMargin"/>
+                style="@style/buttonMargin" />
 
             <Button
                 android:id="@+id/sevenButton"
@@ -212,7 +206,7 @@
                 android:text="8"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                style="@style/buttonMargin"/>
+                style="@style/buttonMargin" />
         </LinearLayout>
 
         <LinearLayout
@@ -225,27 +219,27 @@
                 android:id="@+id/nineButton"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:Text="9"/>
+                android:text="9"/>
 
             <Button
                 android:id="@+id/tenButton"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:Text="10"
-                style="@style/buttonMargin"/>
+                android:text="10"
+                style="@style/buttonMargin" />
 
             <Button
                 android:id="@+id/elevenButton"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:Text="11"/>
+                android:text="11"/>
 
             <Button
                 android:id="@+id/twelveButton"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:Text="12"
-                style="@style/buttonMargin"/>
+                android:text="12"
+                style="@style/buttonMargin" />
         </LinearLayout>
 
     </LinearLayout>
