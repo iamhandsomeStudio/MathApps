@@ -153,8 +153,8 @@
                 android:id="@+id/oneButton"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="1"
-                android:background="@color/black"/>
+                android:backgroundTint="#C32B2B"
+                android:text="1" />
 
             <Button
                 android:id="@+id/twoButton"
