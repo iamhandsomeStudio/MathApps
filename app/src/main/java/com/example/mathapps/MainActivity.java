@@ -16,18 +16,18 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);/*Test*/
-        btn = (Button)findViewById(R.id.button);
-        btn2 = (Button)findViewById(R.id.button2);
-        btn3 = (Button)findViewById(R.id.button3);
-        btn4 = (Button)findViewById(R.id.button4);
-        btn5 = (Button)findViewById(R.id.button5);
-        btn6 = (Button)findViewById(R.id.button6);
-        btn7 = (Button)findViewById(R.id.button7);
-        btn8 = (Button)findViewById(R.id.button8);
-        btn9 = (Button)findViewById(R.id.button9);
-        btn10 = (Button)findViewById(R.id.button10);
-        btn11 = (Button)findViewById(R.id.button11);
-        btn12 = (Button)findViewById(R.id.button12);
+        btn = (Button)findViewById(R.id.oneButton);
+        btn2 = (Button)findViewById(R.id.twoButton);
+        btn3 = (Button)findViewById(R.id.threeButton);
+        btn4 = (Button)findViewById(R.id.fourButton);
+        btn5 = (Button)findViewById(R.id.fiveButton);
+        btn6 = (Button)findViewById(R.id.sixButton);
+        btn7 = (Button)findViewById(R.id.sevenButton);
+        btn8 = (Button)findViewById(R.id.eightButton);
+        btn9 = (Button)findViewById(R.id.nineButton);
+        btn10 = (Button)findViewById(R.id.tenButton);
+        btn11 = (Button)findViewById(R.id.elevenButton);
+        btn12 = (Button)findViewById(R.id.twelveButton);
 
         btn.setText(String.valueOf((int)(Math.random()*10+1)));
         btn2.setText(String.valueOf((int)(Math.random()*10+1)));
