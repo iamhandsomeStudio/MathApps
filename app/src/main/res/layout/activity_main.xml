@@ -125,7 +125,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/ques_six"
-                android:textSize="35sp" />
+                android:textSize="40sp" />
 
             <TextView
                 android:id="@+id/quesSix"
@@ -153,31 +153,28 @@
                 android:id="@+id/oneButton"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:backgroundTint="#FFEB3B"
+                android:backgroundTint="#C32B2B"
                 android:text="1" />
 
             <Button
                 android:id="@+id/twoButton"
-                style="@style/buttonMargin"
+                android:text="2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:backgroundTint="#FFEB3B"
-                android:text="2" />
+                style="@style/buttonMargin" />
 
             <Button
                 android:id="@+id/threeButton"
+                android:text="3"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:backgroundTint="#FFEB3B"
-                android:text="3" />
+                android:layout_height="match_parent" />
 
             <Button
                 android:id="@+id/fourButton"
-                style="@style/buttonMargin"
+                android:text="4"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:backgroundTint="#FFEB3B"
-                android:text="4" />
+                style="@style/buttonMargin" />
         </LinearLayout>
 
         <LinearLayout
@@ -188,33 +185,29 @@
 
             <Button
                 android:id="@+id/fiveButton"
+                android:text="5"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:backgroundTint="#FFEB3B"
-                android:text="5" />
+                android:layout_height="match_parent" />
 
             <Button
                 android:id="@+id/sixButton"
-                style="@style/buttonMargin"
+                android:text="6"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:backgroundTint="#FFEB3B"
-                android:text="6" />
+                style="@style/buttonMargin" />
 
             <Button
                 android:id="@+id/sevenButton"
+                android:text="7"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:backgroundTint="#FFEB3B"
-                android:text="7" />
+                android:layout_height="match_parent" />
 
             <Button
                 android:id="@+id/eightButton"
-                style="@style/buttonMargin"
+                android:text="8"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:backgroundTint="#FFEB3B"
-                android:text="8" />
+                style="@style/buttonMargin" />
         </LinearLayout>
 
         <LinearLayout
@@ -227,31 +220,27 @@
                 android:id="@+id/nineButton"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:backgroundTint="#FFEB3B"
                 android:text="9" />
 
             <Button
                 android:id="@+id/tenButton"
-                style="@style/buttonMargin"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:backgroundTint="#FFEB3B"
-                android:text="10" />
+                android:text="10"
+                style="@style/buttonMargin" />
 
             <Button
                 android:id="@+id/elevenButton"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:backgroundTint="#FFEB3B"
                 android:text="11" />
 
             <Button
                 android:id="@+id/twelveButton"
-                style="@style/buttonMargin"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:backgroundTint="#FFEB3B"
-                android:text="12" />
+                android:text="12"
+                style="@style/buttonMargin" />
         </LinearLayout>
 
     </LinearLayout>
