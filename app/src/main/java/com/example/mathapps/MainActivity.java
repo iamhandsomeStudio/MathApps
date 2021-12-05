@@ -6,16 +6,27 @@ import android.os.Bundle;
 import android.renderscript.Sampler;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
     Button btn,btn2,btn3,btn4,btn5,btn6,btn7,btn8,btn9,btn10,btn11,btn12;
+    TextView que1,que2,que3,que4,que5,que6;
+    int[] x = new int[12];
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);/*Test*/
+
+        que1 = (TextView)findViewById(R.id.quesOne);
+        que2 = (TextView)findViewById(R.id.quesTwo);
+        que3 = (TextView)findViewById(R.id.quesThree);
+        que4 = (TextView)findViewById(R.id.quesFour);
+        que5 = (TextView)findViewById(R.id.quesFive);
+        que6 = (TextView)findViewById(R.id.quesSix);
+
         btn = (Button)findViewById(R.id.oneButton);
         btn2 = (Button)findViewById(R.id.twoButton);
         btn3 = (Button)findViewById(R.id.threeButton);
@@ -29,6 +40,8 @@ public class MainActivity extends AppCompatActivity {
         btn11 = (Button)findViewById(R.id.elevenButton);
         btn12 = (Button)findViewById(R.id.twelveButton);
 
+
+
         btn.setText(String.valueOf((int)(Math.random()*10+1)));
         btn2.setText(String.valueOf((int)(Math.random()*10+1)));
         btn3.setText(String.valueOf((int)(Math.random()*10+1)));
@@ -41,6 +54,18 @@ public class MainActivity extends AppCompatActivity {
         btn10.setText(String.valueOf((int)(Math.random()*10+1)));
         btn11.setText(String.valueOf((int)(Math.random()*10+1)));
         btn12.setText(String.valueOf((int)(Math.random()*10+1)));
+
+
+        que1.setText(String.valueOf((int)(Math.random()*20+1)));
+        que2.setText(String.valueOf((int)(Math.random()*20+1)));
+        que3.setText(String.valueOf((int)(Math.random()*20+1)));
+        que4.setText(String.valueOf((int)(Math.random()*20+1)));
+        que5.setText(String.valueOf((int)(Math.random()*20+1)));
+        que6.setText(String.valueOf((int)(Math.random()*20+1)));
+
+
+
+
     }
 
     public void click(View v){
