@@ -13,6 +13,8 @@ public class MainActivity extends AppCompatActivity {
     Button btn,btn2,btn3,btn4,btn5,btn6,btn7,btn8,btn9,btn10,btn11,btn12;
     TextView que1,que2,que3,que4,que5,que6;
     int[] x = new int[12];
+    int[] y = new int[6];
+    String[] ans = new String[6];
 
 
     @Override
@@ -66,43 +68,340 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+
+
+
+        y[0] = Integer.parseInt(String.valueOf(que1.getText()));
+        y[1] = Integer.parseInt(String.valueOf(que2.getText()));
+        y[2] = Integer.parseInt(String.valueOf(que3.getText()));
+        y[3] = Integer.parseInt(String.valueOf(que4.getText()));
+        y[4] = Integer.parseInt(String.valueOf(que5.getText()));
+        y[5] = Integer.parseInt(String.valueOf(que6.getText()));
+
     }
 
     public void click(View v){
-        btn.setText("");
+        x[0] = Integer.parseInt(String.valueOf(btn.getText()));
+        for(int i = 0; i < 6; i++){
+            if(y[i] == x[0] + x[1]){
+                if(i == 0){
+                    que1.setText("完成!");
+                    break;
+                }
+                if(i == 1){
+                    que2.setText("完成!");
+                    break;
+                }
+                if(i == 2){
+                    que3.setText("完成!");
+                    break;
+                }
+                if(i == 3){
+                    que4.setText("完成!");
+                    break;
+                }
+                if(i == 4){
+                    que5.setText("完成!");
+                    break;
+                }
+                if(i == 5){
+                    que6.setText("完成!");
+                    break;
+                }
+            }
+            if(y[i] == x[0] + x[2]){
+                if(i == 0){
+                    que1.setText("完成!");
+                    break;
+                }
+                if(i == 1){
+                    que2.setText("完成!");
+                    break;
+                }
+                if(i == 2){
+                    que3.setText("完成!");
+                    break;
+                }
+                if(i == 3){
+                    que4.setText("完成!");
+                    break;
+                }
+                if(i == 4){
+                    que5.setText("完成!");
+                    break;
+                }
+                if(i == 5){
+                    que6.setText("完成!");
+                    break;
+                }
+            }
+            if(y[i] == x[0] + x[3]){
+                if(i == 0){
+                    que1.setText("完成!");
+                    break;
+                }
+                if(i == 1){
+                    que2.setText("完成!");
+                    break;
+                }
+                if(i == 2){
+                    que3.setText("完成!");
+                    break;
+                }
+                if(i == 3){
+                    que4.setText("完成!");
+                    break;
+                }
+                if(i == 4){
+                    que5.setText("完成!");
+                    break;
+                }
+                if(i == 5){
+                    que6.setText("完成!");
+                    break;
+                }
+            }
+            if(y[i] == x[0] + x[4]){
+                if(i == 0){
+                    que1.setText("完成!");
+                    break;
+                }
+                if(i == 1){
+                    que2.setText("完成!");
+                    break;
+                }
+                if(i == 2){
+                    que3.setText("完成!");
+                    break;
+                }
+                if(i == 3){
+                    que4.setText("完成!");
+                    break;
+                }
+                if(i == 4){
+                    que5.setText("完成!");
+                    break;
+                }
+                if(i == 5){
+                    que6.setText("完成!");
+                    break;
+                }
+            }
+            if(y[i] == x[0] + x[5]){
+                if(i == 0){
+                    que1.setText("完成!");
+                    break;
+                }
+                if(i == 1){
+                    que2.setText("完成!");
+                    break;
+                }
+                if(i == 2){
+                    que3.setText("完成!");
+                    break;
+                }
+                if(i == 3){
+                    que4.setText("完成!");
+                    break;
+                }
+                if(i == 4){
+                    que5.setText("完成!");
+                    break;
+                }
+                if(i == 5){
+                    que6.setText("完成!");
+                    break;
+                }
+            }
+            if(y[i] == x[0] + x[6]){
+                if(i == 0){
+                    que1.setText("完成!");
+                    break;
+                }
+                if(i == 1){
+                    que2.setText("完成!");
+                    break;
+                }
+                if(i == 2){
+                    que3.setText("完成!");
+                    break;
+                }
+                if(i == 3){
+                    que4.setText("完成!");
+                    break;
+                }
+                if(i == 4){
+                    que5.setText("完成!");
+                    break;
+                }
+                if(i == 5){
+                    que6.setText("完成!");
+                    break;
+                }
+            }
+            if(y[i] == x[0] + x[7]){
+                if(i == 0){
+                    que1.setText("完成!");
+                    break;
+                }
+                if(i == 1){
+                    que2.setText("完成!");
+                    break;
+                }
+                if(i == 2){
+                    que3.setText("完成!");
+                    break;
+                }
+                if(i == 3){
+                    que4.setText("完成!");
+                    break;
+                }
+                if(i == 4){
+                    que5.setText("完成!");
+                    break;
+                }
+                if(i == 5){
+                    que6.setText("完成!");
+                    break;
+                }
+            }
+            if(y[i] == x[0] + x[8]){
+                if(i == 0){
+                    que1.setText("完成!");
+                    break;
+                }
+                if(i == 1){
+                    que2.setText("完成!");
+                    break;
+                }
+                if(i == 2){
+                    que3.setText("完成!");
+                    break;
+                }
+                if(i == 3){
+                    que4.setText("完成!");
+                    break;
+                }
+                if(i == 4){
+                    que5.setText("完成!");
+                    break;
+                }
+                if(i == 5){
+                    que6.setText("完成!");
+                    break;
+                }
+            }
+            if(y[i] == x[0] + x[9]){
+                if(i == 0){
+                    que1.setText("完成!");
+                    break;
+                }
+                if(i == 1){
+                    que2.setText("完成!");
+                    break;
+                }
+                if(i == 2){
+                    que3.setText("完成!");
+                    break;
+                }
+                if(i == 3){
+                    que4.setText("完成!");
+                    break;
+                }
+                if(i == 4){
+                    que5.setText("完成!");
+                    break;
+                }
+                if(i == 5){
+                    que6.setText("完成!");
+                    break;
+                }
+            }
+            if(y[i] == x[0] + x[10]){
+                if(i == 0){
+                    que1.setText("完成!");
+                    break;
+                }
+                if(i == 1){
+                    que2.setText("完成!");
+                    break;
+                }
+                if(i == 2){
+                    que3.setText("完成!");
+                    break;
+                }
+                if(i == 3){
+                    que4.setText("完成!");
+                    break;
+                }
+                if(i == 4){
+                    que5.setText("完成!");
+                    break;
+                }
+                if(i == 5){
+                    que6.setText("完成!");
+                    break;
+                }
+            }
+            if(y[i] == x[0] + x[11]){
+                if(i == 0){
+                    que1.setText("完成!");
+                    break;
+                }
+                if(i == 1){
+                    que2.setText("完成!");
+                    break;
+                }
+                if(i == 2){
+                    que3.setText("完成!");
+                    break;
+                }
+                if(i == 3){
+                    que4.setText("完成!");
+                    break;
+                }
+                if(i == 4){
+                    que5.setText("完成!");
+                    break;
+                }
+                if(i == 5){
+                    que6.setText("完成!");
+                    break;
+                }
+            }
+        }
     }
     public void click_2(View v){
-        btn2.setText("");
+        x[1] = Integer.parseInt(String.valueOf(btn2.getText()));
     }
     public void click_3(View v){
-        btn3.setText("");
+        x[2] = Integer.parseInt(String.valueOf(btn3.getText()));
     }
     public void click_4(View v){
-        btn4.setText("");
+        x[3] = Integer.parseInt(String.valueOf(btn4.getText()));
     }
     public void click_5(View v){
-        btn5.setText("");
+        x[4] = Integer.parseInt(String.valueOf(btn5.getText()));
     }
     public void click_6(View v){
-        btn6.setText("");
+        x[5] = Integer.parseInt(String.valueOf(btn6.getText()));
     }
     public void click_7(View v){
-        btn7.setText("");
+        x[6] = Integer.parseInt(String.valueOf(btn7.getText()));
     }
     public void click_8(View v){
-        btn8.setText("");
+        x[7] = Integer.parseInt(String.valueOf(btn8.getText()));
     }
     public void click_9(View v){
-        btn9.setText("");
+        x[8] = Integer.parseInt(String.valueOf(btn9.getText()));
     }
     public void click_10(View v){
-        btn10.setText("");
+        x[9] = Integer.parseInt(String.valueOf(btn10.getText()));
     }
     public void click_11(View v){
-        btn11.setText("");
+        x[10] = Integer.parseInt(String.valueOf(btn11.getText()));
     }
     public void click_12(View v){
-        btn12.setText("");
+        x[11] = Integer.parseInt(String.valueOf(btn12.getText()));
     }
-
 }
