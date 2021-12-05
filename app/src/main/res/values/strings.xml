@@ -7,4 +7,19 @@
     <string name="ques_four">4:</string>
     <string name="ques_five">5:</string>
     <string name="ques_six">6:</string>
+    <string name="difficult">選擇困難度</string>
+    <string name="expression">選擇玩法</string>
+
+    <string-array name="difficult_array">
+        <item>第一級</item>
+        <item>第二級</item>
+        <item>第三級</item>
+        <item>第四級</item>
+        <item>第五級</item>
+    </string-array>
+    <string-array name="expression_array">
+        <item>加法</item>
+        <item>減法</item>
+    </string-array>
+
 </resources>
