@@ -67,10 +67,6 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
-
-
-
         y[0] = Integer.parseInt(String.valueOf(que1.getText()));
         y[1] = Integer.parseInt(String.valueOf(que2.getText()));
         y[2] = Integer.parseInt(String.valueOf(que3.getText()));
@@ -78,298 +74,12 @@ public class MainActivity extends AppCompatActivity {
         y[4] = Integer.parseInt(String.valueOf(que5.getText()));
         y[5] = Integer.parseInt(String.valueOf(que6.getText()));
 
+
     }
 
     public void click(View v){
         x[0] = Integer.parseInt(String.valueOf(btn.getText()));
-        for(int i = 0; i < 6; i++){
-            if(y[i] == x[0] + x[1]){
-                if(i == 0){
-                    que1.setText("完成!");
-                    break;
-                }
-                if(i == 1){
-                    que2.setText("完成!");
-                    break;
-                }
-                if(i == 2){
-                    que3.setText("完成!");
-                    break;
-                }
-                if(i == 3){
-                    que4.setText("完成!");
-                    break;
-                }
-                if(i == 4){
-                    que5.setText("完成!");
-                    break;
-                }
-                if(i == 5){
-                    que6.setText("完成!");
-                    break;
-                }
-            }
-            if(y[i] == x[0] + x[2]){
-                if(i == 0){
-                    que1.setText("完成!");
-                    break;
-                }
-                if(i == 1){
-                    que2.setText("完成!");
-                    break;
-                }
-                if(i == 2){
-                    que3.setText("完成!");
-                    break;
-                }
-                if(i == 3){
-                    que4.setText("完成!");
-                    break;
-                }
-                if(i == 4){
-                    que5.setText("完成!");
-                    break;
-                }
-                if(i == 5){
-                    que6.setText("完成!");
-                    break;
-                }
-            }
-            if(y[i] == x[0] + x[3]){
-                if(i == 0){
-                    que1.setText("完成!");
-                    break;
-                }
-                if(i == 1){
-                    que2.setText("完成!");
-                    break;
-                }
-                if(i == 2){
-                    que3.setText("完成!");
-                    break;
-                }
-                if(i == 3){
-                    que4.setText("完成!");
-                    break;
-                }
-                if(i == 4){
-                    que5.setText("完成!");
-                    break;
-                }
-                if(i == 5){
-                    que6.setText("完成!");
-                    break;
-                }
-            }
-            if(y[i] == x[0] + x[4]){
-                if(i == 0){
-                    que1.setText("完成!");
-                    break;
-                }
-                if(i == 1){
-                    que2.setText("完成!");
-                    break;
-                }
-                if(i == 2){
-                    que3.setText("完成!");
-                    break;
-                }
-                if(i == 3){
-                    que4.setText("完成!");
-                    break;
-                }
-                if(i == 4){
-                    que5.setText("完成!");
-                    break;
-                }
-                if(i == 5){
-                    que6.setText("完成!");
-                    break;
-                }
-            }
-            if(y[i] == x[0] + x[5]){
-                if(i == 0){
-                    que1.setText("完成!");
-                    break;
-                }
-                if(i == 1){
-                    que2.setText("完成!");
-                    break;
-                }
-                if(i == 2){
-                    que3.setText("完成!");
-                    break;
-                }
-                if(i == 3){
-                    que4.setText("完成!");
-                    break;
-                }
-                if(i == 4){
-                    que5.setText("完成!");
-                    break;
-                }
-                if(i == 5){
-                    que6.setText("完成!");
-                    break;
-                }
-            }
-            if(y[i] == x[0] + x[6]){
-                if(i == 0){
-                    que1.setText("完成!");
-                    break;
-                }
-                if(i == 1){
-                    que2.setText("完成!");
-                    break;
-                }
-                if(i == 2){
-                    que3.setText("完成!");
-                    break;
-                }
-                if(i == 3){
-                    que4.setText("完成!");
-                    break;
-                }
-                if(i == 4){
-                    que5.setText("完成!");
-                    break;
-                }
-                if(i == 5){
-                    que6.setText("完成!");
-                    break;
-                }
-            }
-            if(y[i] == x[0] + x[7]){
-                if(i == 0){
-                    que1.setText("完成!");
-                    break;
-                }
-                if(i == 1){
-                    que2.setText("完成!");
-                    break;
-                }
-                if(i == 2){
-                    que3.setText("完成!");
-                    break;
-                }
-                if(i == 3){
-                    que4.setText("完成!");
-                    break;
-                }
-                if(i == 4){
-                    que5.setText("完成!");
-                    break;
-                }
-                if(i == 5){
-                    que6.setText("完成!");
-                    break;
-                }
-            }
-            if(y[i] == x[0] + x[8]){
-                if(i == 0){
-                    que1.setText("完成!");
-                    break;
-                }
-                if(i == 1){
-                    que2.setText("完成!");
-                    break;
-                }
-                if(i == 2){
-                    que3.setText("完成!");
-                    break;
-                }
-                if(i == 3){
-                    que4.setText("完成!");
-                    break;
-                }
-                if(i == 4){
-                    que5.setText("完成!");
-                    break;
-                }
-                if(i == 5){
-                    que6.setText("完成!");
-                    break;
-                }
-            }
-            if(y[i] == x[0] + x[9]){
-                if(i == 0){
-                    que1.setText("完成!");
-                    break;
-                }
-                if(i == 1){
-                    que2.setText("完成!");
-                    break;
-                }
-                if(i == 2){
-                    que3.setText("完成!");
-                    break;
-                }
-                if(i == 3){
-                    que4.setText("完成!");
-                    break;
-                }
-                if(i == 4){
-                    que5.setText("完成!");
-                    break;
-                }
-                if(i == 5){
-                    que6.setText("完成!");
-                    break;
-                }
-            }
-            if(y[i] == x[0] + x[10]){
-                if(i == 0){
-                    que1.setText("完成!");
-                    break;
-                }
-                if(i == 1){
-                    que2.setText("完成!");
-                    break;
-                }
-                if(i == 2){
-                    que3.setText("完成!");
-                    break;
-                }
-                if(i == 3){
-                    que4.setText("完成!");
-                    break;
-                }
-                if(i == 4){
-                    que5.setText("完成!");
-                    break;
-                }
-                if(i == 5){
-                    que6.setText("完成!");
-                    break;
-                }
-            }
-            if(y[i] == x[0] + x[11]){
-                if(i == 0){
-                    que1.setText("完成!");
-                    break;
-                }
-                if(i == 1){
-                    que2.setText("完成!");
-                    break;
-                }
-                if(i == 2){
-                    que3.setText("完成!");
-                    break;
-                }
-                if(i == 3){
-                    que4.setText("完成!");
-                    break;
-                }
-                if(i == 4){
-                    que5.setText("完成!");
-                    break;
-                }
-                if(i == 5){
-                    que6.setText("完成!");
-                    break;
-                }
-            }
-        }
+        sum(x[0],x[1]);
     }
     public void click_2(View v){
         x[1] = Integer.parseInt(String.valueOf(btn2.getText()));
@@ -403,5 +113,21 @@ public class MainActivity extends AppCompatActivity {
     }
     public void click_12(View v){
         x[11] = Integer.parseInt(String.valueOf(btn12.getText()));
+    }
+
+    public void sum(int a,int b){
+        if(y[0] == a+b){
+            que1.setText("1:完成");
+        }else if(y[1] == a+b){
+            que2.setText("2:完成");
+        }else if(y[2] == a+b){
+            que3.setText("3:完成");
+        }else if(y[3] == a+b){
+            que4.setText("4:完成");
+        }else if(y[4] == a+b){
+            que5.setText("5:完成");
+        }else if(y[5] == a+b){
+            que6.setText("6:完成");
+        }
     }
 }
