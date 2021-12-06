@@ -60,22 +60,23 @@ public class MainActivity extends AppCompatActivity {
         btn12.setText(String.valueOf((int)(Math.random()*10+1)));
 
 
-        que1.setText(String.valueOf((int)(Math.random()*20+1)));
-        que2.setText(String.valueOf((int)(Math.random()*20+1)));
-        que3.setText(String.valueOf((int)(Math.random()*20+1)));
-        que4.setText(String.valueOf((int)(Math.random()*20+1)));
-        que5.setText(String.valueOf((int)(Math.random()*20+1)));
-        que6.setText(String.valueOf((int)(Math.random()*20+1)));
+        for(int i=0;i<6;i++){
+            y[i] = (int)(Math.random()*20+1);
+            for(int j=0; j < i;j++){
+                if(y[j]==y[i]){
+                    i--;
+                    break;
+                }
+            }
+        }
 
 
-
-        y[0] = Integer.parseInt(String.valueOf(que1.getText()));
-        y[1] = Integer.parseInt(String.valueOf(que2.getText()));
-        y[2] = Integer.parseInt(String.valueOf(que3.getText()));
-        y[3] = Integer.parseInt(String.valueOf(que4.getText()));
-        y[4] = Integer.parseInt(String.valueOf(que5.getText()));
-        y[5] = Integer.parseInt(String.valueOf(que6.getText()));
-
+        que1.setText(String.valueOf(y[0]));
+        que2.setText(String.valueOf(y[1]));
+        que3.setText(String.valueOf(y[2]));
+        que4.setText(String.valueOf(y[3]));
+        que5.setText(String.valueOf(y[4]));
+        que6.setText(String.valueOf(y[5]));
 
     }
 
@@ -139,36 +140,31 @@ public class MainActivity extends AppCompatActivity {
         System.out.println(y[4]);
         System.out.println(y[5]);
         if(y[0] == sum2 && count == 2){
-            System.out.println(sum2);
-            que1.setText("1:完成");
+            que1.setText("完成");
             sum2 = 0;
             count = 0;
         }else if(y[1] == sum2 && count == 2){
-            System.out.println(sum2);
-            que2.setText("2:完成");
+            que2.setText("完成");
             sum2 = 0;
             count = 0;
         }else if(y[2] == sum2 && count == 2){
-            System.out.println(sum2);
-            que3.setText("3:完成");
+            que3.setText("完成");
             sum2 = 0;
             count = 0;
         }else if(y[3] == sum2 && count == 2){
-            System.out.println(sum2);
-            que4.setText("4:完成");
+            que4.setText("完成");
             sum2 = 0;
             count = 0;
         }else if(y[4] == sum2 && count == 2){
-            System.out.println(sum2);
-            que5.setText("5:完成");
+            que5.setText("完成");
             sum2 = 0;
             count = 0;
         }else if(y[5] == sum2 && count == 2){
-            System.out.println(sum2);
-            que6.setText("6:完成");
+            que6.setText("完成");
             sum2 = 0;
             count = 0;
         }else if(count == 2){
+            sum2 = 0;
             count = 0;
         }
     }
