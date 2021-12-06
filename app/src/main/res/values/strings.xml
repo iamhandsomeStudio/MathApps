@@ -10,6 +10,7 @@
     <string name="difficult">選擇困難度</string>
     <string name="expression">選擇玩法</string>
     <string name="start">開始玩</string>
+    <string name="name">玩家名字</string>
     <string-array name="difficult_array">
         <item>第一級</item>
         <item>第二級</item>
