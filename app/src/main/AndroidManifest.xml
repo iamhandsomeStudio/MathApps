@@ -10,16 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MathApps">
         <activity
+            android:name=".ExplanationActivity"
+            android:exported="false" />
+        <activity
             android:name=".SelectActivity"
             android:exported="false"
-            android:screenOrientation="landscape">
-        </activity>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".WelcomeActivity"
             android:exported="false"
-            android:screenOrientation="landscape">
-
-        </activity>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".MainActivity"
             android:exported="true"

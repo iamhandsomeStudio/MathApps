@@ -154,7 +154,7 @@
                 android:id="@+id/oneButton"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:backgroundTint="#C32B2B"
+                android:backgroundTint="#F6EB08"
                 android:onClick="click"
                 android:text="1" />
 
@@ -163,6 +163,7 @@
                 style="@style/buttonMargin"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:backgroundTint="#F6EB08"
                 android:onClick="click_2"
                 android:text="2" />
 
@@ -170,6 +171,7 @@
                 android:id="@+id/threeButton"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:backgroundTint="#F6EB08"
                 android:onClick="click_3"
                 android:text="3" />
 
@@ -178,6 +180,7 @@
                 style="@style/buttonMargin"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:backgroundTint="#F6EB08"
                 android:onClick="click_4"
                 android:text="4" />
         </LinearLayout>
@@ -192,6 +195,7 @@
                 android:id="@+id/fiveButton"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:backgroundTint="#F6EB08"
                 android:onClick="click_5"
                 android:text="5" />
 
@@ -200,6 +204,7 @@
                 style="@style/buttonMargin"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:backgroundTint="#F6EB08"
                 android:onClick="click_6"
                 android:text="6" />
 
@@ -207,6 +212,7 @@
                 android:id="@+id/sevenButton"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:backgroundTint="#F6EB08"
                 android:onClick="click_7"
                 android:text="7" />
 
@@ -215,6 +221,7 @@
                 style="@style/buttonMargin"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:backgroundTint="#F6EB08"
                 android:onClick="click_8"
                 android:text="8" />
         </LinearLayout>
@@ -229,6 +236,7 @@
                 android:id="@+id/nineButton"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:backgroundTint="#F6EB08"
                 android:onClick="click_9"
                 android:text="9" />
 
@@ -237,6 +245,7 @@
                 style="@style/buttonMargin"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:backgroundTint="#F6EB08"
                 android:onClick="click_10"
                 android:text="10" />
 
@@ -244,6 +253,7 @@
                 android:id="@+id/elevenButton"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:backgroundTint="#F6EB08"
                 android:onClick="click_11"
                 android:text="11" />
 
@@ -252,6 +262,7 @@
                 style="@style/buttonMargin"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:backgroundTint="#F6EB08"
                 android:onClick="click_12"
                 android:text="12" />
         </LinearLayout>
