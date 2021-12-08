@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     int[] y = new int[6];
     int sum2,count = 0,score = 0;
     String[] ans = new String[6];
+    int level = 2;
 
 
     @Override
@@ -47,17 +48,7 @@ public class MainActivity extends AppCompatActivity {
         btn12 = (Button)findViewById(R.id.twelveButton);
 
         btnText();
-
-        for(int i=0;i<6;i++){
-            y[i] = (int)(Math.random()*20+1);
-            for(int j=0; j < i;j++){
-                if(y[j]==y[i]){
-                    i--;
-                    break;
-                }
-            }
-        }
-
+        ansRandom();
 
         que1.setText(String.valueOf(y[0]));
         que2.setText(String.valueOf(y[1]));
@@ -66,6 +57,65 @@ public class MainActivity extends AppCompatActivity {
         que5.setText(String.valueOf(y[4]));
         que6.setText(String.valueOf(y[5]));
 
+
+    }
+
+    public void ansRandom(){
+        if(level == 1){
+            for(int i=0;i<6;i++){
+                y[i] = (int)(Math.random()*20+1);
+                for(int j=0; j < i;j++){
+                    if(y[j]==y[i]){
+                        i--;
+                        break;
+                    }
+                }
+            }
+        }
+        if(level == 2){
+            for(int i=0;i<6;i++){
+                y[i] = (int)(Math.random()*80+1);
+                for(int j=0; j < i;j++){
+                    if(y[j]==y[i]){
+                        i--;
+                        break;
+                    }
+                }
+            }
+        }
+        if(level == 3){
+            for(int i=0;i<6;i++){
+                y[i] = (int)(Math.random()*120+1);
+                for(int j=0; j < i;j++){
+                    if(y[j]==y[i]){
+                        i--;
+                        break;
+                    }
+                }
+            }
+        }
+        if(level == 4){
+            for(int i=0;i<6;i++){
+                y[i] = (int)(Math.random()*160+1);
+                for(int j=0; j < i;j++){
+                    if(y[j]==y[i]){
+                        i--;
+                        break;
+                    }
+                }
+            }
+        }
+        if(level == 5){
+            for(int i=0;i<6;i++){
+                y[i] = (int)(Math.random()*200+1);
+                for(int j=0; j < i;j++){
+                    if(y[j]==y[i]){
+                        i--;
+                        break;
+                    }
+                }
+            }
+        }
 
     }
 
@@ -204,18 +254,78 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void btnText(){
-        btn.setText(String.valueOf((int)(Math.random()*10+1)));
-        btn2.setText(String.valueOf((int)(Math.random()*10+1)));
-        btn3.setText(String.valueOf((int)(Math.random()*10+1)));
-        btn4.setText(String.valueOf((int)(Math.random()*10+1)));
-        btn5.setText(String.valueOf((int)(Math.random()*10+1)));
-        btn6.setText(String.valueOf((int)(Math.random()*10+1)));
-        btn7.setText(String.valueOf((int)(Math.random()*10+1)));
-        btn8.setText(String.valueOf((int)(Math.random()*10+1)));
-        btn9.setText(String.valueOf((int)(Math.random()*10+1)));
-        btn10.setText(String.valueOf((int)(Math.random()*10+1)));
-        btn11.setText(String.valueOf((int)(Math.random()*10+1)));
-        btn12.setText(String.valueOf((int)(Math.random()*10+1)));
+        if(level == 1){
+            btn.setText(String.valueOf((int)(Math.random()*10+1)));
+            btn2.setText(String.valueOf((int)(Math.random()*10+1)));
+            btn3.setText(String.valueOf((int)(Math.random()*10+1)));
+            btn4.setText(String.valueOf((int)(Math.random()*10+1)));
+            btn5.setText(String.valueOf((int)(Math.random()*10+1)));
+            btn6.setText(String.valueOf((int)(Math.random()*10+1)));
+            btn7.setText(String.valueOf((int)(Math.random()*10+1)));
+            btn8.setText(String.valueOf((int)(Math.random()*10+1)));
+            btn9.setText(String.valueOf((int)(Math.random()*10+1)));
+            btn10.setText(String.valueOf((int)(Math.random()*10+1)));
+            btn11.setText(String.valueOf((int)(Math.random()*10+1)));
+            btn12.setText(String.valueOf((int)(Math.random()*10+1)));
+        }
+        if(level == 2){
+            btn.setText(String.valueOf((int)(Math.random()*40+1)));
+            btn2.setText(String.valueOf((int)(Math.random()*40+1)));
+            btn3.setText(String.valueOf((int)(Math.random()*40+1)));
+            btn4.setText(String.valueOf((int)(Math.random()*40+1)));
+            btn5.setText(String.valueOf((int)(Math.random()*40+1)));
+            btn6.setText(String.valueOf((int)(Math.random()*40+1)));
+            btn7.setText(String.valueOf((int)(Math.random()*40+1)));
+            btn8.setText(String.valueOf((int)(Math.random()*40+1)));
+            btn9.setText(String.valueOf((int)(Math.random()*40+1)));
+            btn10.setText(String.valueOf((int)(Math.random()*40+1)));
+            btn11.setText(String.valueOf((int)(Math.random()*40+1)));
+            btn12.setText(String.valueOf((int)(Math.random()*40+1)));
+        }
+        if(level == 3){
+            btn.setText(String.valueOf((int)(Math.random()*60+1)));
+            btn2.setText(String.valueOf((int)(Math.random()*60+1)));
+            btn3.setText(String.valueOf((int)(Math.random()*60+1)));
+            btn4.setText(String.valueOf((int)(Math.random()*60+1)));
+            btn5.setText(String.valueOf((int)(Math.random()*60+1)));
+            btn6.setText(String.valueOf((int)(Math.random()*60+1)));
+            btn7.setText(String.valueOf((int)(Math.random()*60+1)));
+            btn8.setText(String.valueOf((int)(Math.random()*60+1)));
+            btn9.setText(String.valueOf((int)(Math.random()*60+1)));
+            btn10.setText(String.valueOf((int)(Math.random()*60+1)));
+            btn11.setText(String.valueOf((int)(Math.random()*60+1)));
+            btn12.setText(String.valueOf((int)(Math.random()*60+1)));
+        }
+        if(level == 4){
+            btn.setText(String.valueOf((int)(Math.random()*80+1)));
+            btn2.setText(String.valueOf((int)(Math.random()*80+1)));
+            btn3.setText(String.valueOf((int)(Math.random()*80+1)));
+            btn4.setText(String.valueOf((int)(Math.random()*80+1)));
+            btn5.setText(String.valueOf((int)(Math.random()*80+1)));
+            btn6.setText(String.valueOf((int)(Math.random()*80+1)));
+            btn7.setText(String.valueOf((int)(Math.random()*80+1)));
+            btn8.setText(String.valueOf((int)(Math.random()*80+1)));
+            btn9.setText(String.valueOf((int)(Math.random()*80+1)));
+            btn10.setText(String.valueOf((int)(Math.random()*80+1)));
+            btn11.setText(String.valueOf((int)(Math.random()*80+1)));
+            btn12.setText(String.valueOf((int)(Math.random()*80+1)));
+        }
+        if(level == 5){
+            btn.setText(String.valueOf((int)(Math.random()*100+1)));
+            btn2.setText(String.valueOf((int)(Math.random()*100+1)));
+            btn3.setText(String.valueOf((int)(Math.random()*100+1)));
+            btn4.setText(String.valueOf((int)(Math.random()*100+1)));
+            btn5.setText(String.valueOf((int)(Math.random()*100+1)));
+            btn6.setText(String.valueOf((int)(Math.random()*100+1)));
+            btn7.setText(String.valueOf((int)(Math.random()*100+1)));
+            btn8.setText(String.valueOf((int)(Math.random()*100+1)));
+            btn9.setText(String.valueOf((int)(Math.random()*100+1)));
+            btn10.setText(String.valueOf((int)(Math.random()*100+1)));
+            btn11.setText(String.valueOf((int)(Math.random()*100+1)));
+            btn12.setText(String.valueOf((int)(Math.random()*100+1)));
+        }
+
+
     }
 
     public void countGet(){
