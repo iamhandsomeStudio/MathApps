@@ -64,12 +64,14 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_gravity="center">
+
         <Button
+            android:id="@+id/start"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/start"
+            android:onClick="start"
             android:text="@string/start"
-            android:textSize="30sp"/>
+            android:textSize="30sp" />
     </LinearLayout>
 
 
