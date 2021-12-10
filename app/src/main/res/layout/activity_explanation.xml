@@ -5,7 +5,29 @@
     android:id="@+id/explanation_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ExplanationActivity"
-    android:background="@drawable/explanation">
+    tools:context=".ExplanationActivity">
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="641dp"
+        android:layout_height="341dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.177"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.228"
+        app:srcCompat="@drawable/explanation" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="下一步"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.983" />
 </androidx.constraintlayout.widget.ConstraintLayout>
