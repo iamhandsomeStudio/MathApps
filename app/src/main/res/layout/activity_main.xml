@@ -9,7 +9,7 @@
     tools:context=".MainActivity">
 
     <LinearLayout
-        android:layout_width="123dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_weight="1"
@@ -25,14 +25,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/ques_one"
-                android:textSize="35sp" />
+                android:textSize="30sp" />
 
             <TextView
                 android:id="@+id/quesOne"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="1"
-                android:textSize="35sp"
+                android:textSize="30sp"
                 tools:ignore="HardcodedText" />
         </LinearLayout>
 
@@ -46,14 +46,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/ques_two"
-                android:textSize="35sp" />
+                android:textSize="30sp" />
 
             <TextView
                 android:id="@+id/quesTwo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="1"
-                android:textSize="35sp" />
+                android:textSize="30sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -66,14 +66,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/ques_three"
-                android:textSize="35sp" />
+                android:textSize="30sp" />
 
             <TextView
                 android:id="@+id/quesThree"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="1"
-                android:textSize="35sp" />
+                android:textSize="30sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -86,14 +86,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/ques_four"
-                android:textSize="35sp" />
+                android:textSize="30sp" />
 
             <TextView
                 android:id="@+id/quesFour"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="1"
-                android:textSize="35sp" />
+                android:textSize="30sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -106,14 +106,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/ques_five"
-                android:textSize="35sp" />
+                android:textSize="30sp" />
 
             <TextView
                 android:id="@+id/quesFive"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="1"
-                android:textSize="35sp" />
+                android:textSize="30sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -126,14 +126,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/ques_six"
-                android:textSize="40sp" />
+                android:textSize="30sp" />
 
             <TextView
                 android:id="@+id/quesSix"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="1"
-                android:textSize="35sp" />
+                android:textSize="30sp" />
         </LinearLayout>
     </LinearLayout>
 
@@ -284,7 +284,7 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="2"
+        android:layout_weight="1"
         android:orientation="vertical">
 
         <TextView
@@ -305,22 +305,16 @@
                 android:text="Name_text"
                 android:layout_marginLeft="10dp"
                 android:id="@+id/name"/>
+
+
         </LinearLayout>
-
-
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_gravity="bottom">
-
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/next"
+            android:layout_marginTop="190dp"
+            android:layout_marginLeft="45dp"
             android:text="@string/next"/>
 
-
     </LinearLayout>
+
 </LinearLayout>

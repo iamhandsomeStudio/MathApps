@@ -16,5 +16,13 @@ public class WelcomeActivity extends AppCompatActivity {
             Intent startLandingPageActivity = new Intent(WelcomeActivity.this, ExplanationActivity.class);
             startActivity(startLandingPageActivity);
             },5000);
+
     }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        finish();
+    }
+
 }
