@@ -17,15 +17,16 @@ public class MainActivity extends AppCompatActivity {
     TextView que1,que2,que3,que4,que5,que6;
     int[] x = new int[12];
     int[] y = new int[6];
-    int sum2,count = 0,score = 0;
-    String[] ans = new String[6];
-    int level = 2;
+    int sum2,count = 0,score = 0,page = 0;
+    Bundle extra;  //頁面傳值
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);/*Test*/
+
+        extra = getIntent().getExtras();
 
         que1 = (TextView)findViewById(R.id.quesOne);
         que2 = (TextView)findViewById(R.id.quesTwo);
@@ -61,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void ansRandom(){
-        if(level == 1){
+        if(extra.getString("dif").equals("一")){
             for(int i=0;i<6;i++){
                 y[i] = (int)(Math.random()*20+1);
                 for(int j=0; j < i;j++){
@@ -72,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         }
-        if(level == 2){
+        if(extra.getString("dif").equals("二")){
             for(int i=0;i<6;i++){
                 y[i] = (int)(Math.random()*80+1);
                 for(int j=0; j < i;j++){
@@ -83,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         }
-        if(level == 3){
+        if(extra.getString("dif").equals("三")){
             for(int i=0;i<6;i++){
                 y[i] = (int)(Math.random()*120+1);
                 for(int j=0; j < i;j++){
@@ -94,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         }
-        if(level == 4){
+        if(extra.getString("dif").equals("四")){
             for(int i=0;i<6;i++){
                 y[i] = (int)(Math.random()*160+1);
                 for(int j=0; j < i;j++){
@@ -105,7 +106,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         }
-        if(level == 5){
+        if(extra.getString("dif").equals("五")){
             for(int i=0;i<6;i++){
                 y[i] = (int)(Math.random()*200+1);
                 for(int j=0; j < i;j++){
@@ -123,74 +124,138 @@ public class MainActivity extends AppCompatActivity {
         countGet();
         x[0] = Integer.parseInt(String.valueOf(btn.getText()));
         btn.setBackgroundTintList(ColorStateList.valueOf(Color.BLUE));
-        sum(x[0]);
+        if(extra.getString("ex").equals("加法")){
+            sum(x[0]);
+        }else if(extra.getString("ex").equals("減法")){
+
+        }
     }
     public void click_2(View v){
         countGet();
         x[1] = Integer.parseInt(String.valueOf(btn2.getText()));
         btn2.setBackgroundTintList(ColorStateList.valueOf(Color.BLUE));
-        sum(x[1]);
+        if(extra.getString("ex").equals("加法")){
+            sum(x[1]);
+        }else if(extra.getString("ex").equals("減法")){
+
+        }
     }
     public void click_3(View v){
         countGet();
         x[2] = Integer.parseInt(String.valueOf(btn3.getText()));
         btn3.setBackgroundTintList(ColorStateList.valueOf(Color.BLUE));
-        sum(x[2]);
+        if(extra.getString("ex").equals("加法")){
+            sum(x[2]);
+        }else if(extra.getString("ex").equals("減法")){
+
+        }
     }
     public void click_4(View v){
         countGet();
         x[3] = Integer.parseInt(String.valueOf(btn4.getText()));
         btn4.setBackgroundTintList(ColorStateList.valueOf(Color.BLUE));
-        sum(x[3]);
+        if(extra.getString("ex").equals("加法")){
+            sum(x[3]);
+        }else if(extra.getString("ex").equals("減法")){
+
+        }
     }
     public void click_5(View v){
         countGet();
         x[4] = Integer.parseInt(String.valueOf(btn5.getText()));
         btn5.setBackgroundTintList(ColorStateList.valueOf(Color.BLUE));
-        sum(x[4]);
+        if(extra.getString("ex").equals("加法")){
+            sum(x[4]);
+        }else if(extra.getString("ex").equals("減法")){
+
+        }
     }
     public void click_6(View v){
         countGet();
         x[5] = Integer.parseInt(String.valueOf(btn6.getText()));
         btn6.setBackgroundTintList(ColorStateList.valueOf(Color.BLUE));
-        sum(x[5]);
+        if(extra.getString("ex").equals("加法")){
+            sum(x[5]);
+        }else if(extra.getString("ex").equals("減法")){
+
+        }
     }
     public void click_7(View v){
         countGet();
         x[6] = Integer.parseInt(String.valueOf(btn7.getText()));
         btn7.setBackgroundTintList(ColorStateList.valueOf(Color.BLUE));
-        sum(x[6]);
+        if(extra.getString("ex").equals("加法")){
+            sum(x[6]);
+        }else if(extra.getString("ex").equals("減法")){
+
+        }
     }
     public void click_8(View v){
         countGet();
         x[7] = Integer.parseInt(String.valueOf(btn8.getText()));
         btn8.setBackgroundTintList(ColorStateList.valueOf(Color.BLUE));
-        sum(x[7]);
+        if(extra.getString("ex").equals("加法")){
+            sum(x[7]);
+        }else if(extra.getString("ex").equals("減法")){
+
+        }
     }
     public void click_9(View v){
         countGet();
         x[8] = Integer.parseInt(String.valueOf(btn9.getText()));
         btn9.setBackgroundTintList(ColorStateList.valueOf(Color.BLUE));
-        sum(x[8]);
+        if(extra.getString("ex").equals("加法")){
+            sum(x[8]);
+        }else if(extra.getString("ex").equals("減法")){
+
+        }
     }
     public void click_10(View v){
         countGet();
         x[9] = Integer.parseInt(String.valueOf(btn10.getText()));
         btn10.setBackgroundTintList(ColorStateList.valueOf(Color.BLUE));
-        sum(x[9]);
+        if(extra.getString("ex").equals("加法")){
+            sum(x[9]);
+        }else if(extra.getString("ex").equals("減法")){
+
+        }
     }
     public void click_11(View v){
         countGet();
         x[10] = Integer.parseInt(String.valueOf(btn11.getText()));
         btn11.setBackgroundTintList(ColorStateList.valueOf(Color.BLUE));
-        sum(x[10]);
+        if(extra.getString("ex").equals("加法")){
+            sum(x[10]);
+        }else if(extra.getString("ex").equals("減法")){
+
+        }
     }
     public void click_12(View v){
         countGet();
         x[11] = Integer.parseInt(String.valueOf(btn12.getText()));
         btn12.setBackgroundTintList(ColorStateList.valueOf(Color.BLUE));
-        sum(x[11]);
+        if(extra.getString("ex").equals("加法")){
+            sum(x[11]);
+        }else if(extra.getString("ex").equals("減法")){
+
+        }
     }
+    public void next(View v){    //下一關
+        if(page < 10){
+            ansRandom();
+            btnText();
+            que1.setText(String.valueOf(y[0]));
+            que2.setText(String.valueOf(y[1]));
+            que3.setText(String.valueOf(y[2]));
+            que4.setText(String.valueOf(y[3]));
+            que5.setText(String.valueOf(y[4]));
+            que6.setText(String.valueOf(y[5]));
+            page++;
+        }else{
+            page = 0;
+        }
+    }
+
 
     public void sum(int a){
         sum2 += a;
@@ -254,7 +319,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void btnText(){
-        if(level == 1){
+        if(extra.getString("dif").equals("一")){
             btn.setText(String.valueOf((int)(Math.random()*10+1)));
             btn2.setText(String.valueOf((int)(Math.random()*10+1)));
             btn3.setText(String.valueOf((int)(Math.random()*10+1)));
@@ -268,7 +333,7 @@ public class MainActivity extends AppCompatActivity {
             btn11.setText(String.valueOf((int)(Math.random()*10+1)));
             btn12.setText(String.valueOf((int)(Math.random()*10+1)));
         }
-        if(level == 2){
+        if(extra.getString("dif").equals("二")){
             btn.setText(String.valueOf((int)(Math.random()*40+1)));
             btn2.setText(String.valueOf((int)(Math.random()*40+1)));
             btn3.setText(String.valueOf((int)(Math.random()*40+1)));
@@ -282,7 +347,7 @@ public class MainActivity extends AppCompatActivity {
             btn11.setText(String.valueOf((int)(Math.random()*40+1)));
             btn12.setText(String.valueOf((int)(Math.random()*40+1)));
         }
-        if(level == 3){
+        if(extra.getString("dif").equals("三")){
             btn.setText(String.valueOf((int)(Math.random()*60+1)));
             btn2.setText(String.valueOf((int)(Math.random()*60+1)));
             btn3.setText(String.valueOf((int)(Math.random()*60+1)));
@@ -296,7 +361,7 @@ public class MainActivity extends AppCompatActivity {
             btn11.setText(String.valueOf((int)(Math.random()*60+1)));
             btn12.setText(String.valueOf((int)(Math.random()*60+1)));
         }
-        if(level == 4){
+        if(extra.getString("dif").equals("四")){
             btn.setText(String.valueOf((int)(Math.random()*80+1)));
             btn2.setText(String.valueOf((int)(Math.random()*80+1)));
             btn3.setText(String.valueOf((int)(Math.random()*80+1)));
@@ -310,7 +375,7 @@ public class MainActivity extends AppCompatActivity {
             btn11.setText(String.valueOf((int)(Math.random()*80+1)));
             btn12.setText(String.valueOf((int)(Math.random()*80+1)));
         }
-        if(level == 5){
+        if(extra.getString("dif").equals("五")){
             btn.setText(String.valueOf((int)(Math.random()*100+1)));
             btn2.setText(String.valueOf((int)(Math.random()*100+1)));
             btn3.setText(String.valueOf((int)(Math.random()*100+1)));

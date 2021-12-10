@@ -308,12 +308,14 @@
 
 
         </LinearLayout>
+
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="190dp"
             android:layout_marginLeft="45dp"
-            android:text="@string/next"/>
+            android:layout_marginTop="190dp"
+            android:onClick="next"
+            android:text="@string/next" />
 
     </LinearLayout>
 
