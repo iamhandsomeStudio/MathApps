@@ -303,7 +303,7 @@
             android:layout_marginLeft="45dp"
             android:layout_marginTop="250dp"
             android:onClick="next"
-            android:text="@string/next" />
+            android:text="開始" />
 
     </LinearLayout>
 

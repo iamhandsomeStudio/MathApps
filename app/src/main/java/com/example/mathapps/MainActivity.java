@@ -2,23 +2,28 @@ package com.example.mathapps;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.renderscript.Sampler;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
 public class MainActivity extends AppCompatActivity {
 
-    Button btn,btn2,btn3,btn4,btn5,btn6,btn7,btn8,btn9,btn10,btn11,btn12;
-    TextView que1,que2,que3,que4,que5,que6;
+    Button btn,btn2,btn3,btn4,btn5,btn6,btn7,btn8,btn9,btn10,btn11,btn12,next_stage;
+    TextView que1,que2,que3,que4,que5,que6,time;
     int[] x = new int[12];
     int[] y = new int[6];
-    int sum2,sub,count = 0,score = 0,page = 0;
+    int sum2,sub,count = 0,score = 0,page = 0,min = 0,sec = 0;
     Bundle extra;  //頁面傳值
+    CountDownTimer cdt;
 
 
     @Override
@@ -34,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
         que4 = (TextView)findViewById(R.id.quesFour);
         que5 = (TextView)findViewById(R.id.quesFive);
         que6 = (TextView)findViewById(R.id.quesSix);
+        time = (TextView)findViewById(R.id.time);
 
         btn = (Button)findViewById(R.id.oneButton);
         btn2 = (Button)findViewById(R.id.twoButton);
@@ -48,6 +54,8 @@ public class MainActivity extends AppCompatActivity {
         btn11 = (Button)findViewById(R.id.elevenButton);
         btn12 = (Button)findViewById(R.id.twelveButton);
 
+        next_stage = (Button)findViewById(R.id.next_stage);
+
         btnText();
         ansRandom();
 
@@ -57,6 +65,46 @@ public class MainActivity extends AppCompatActivity {
         que4.setText(String.valueOf(y[3]));
         que5.setText(String.valueOf(y[4]));
         que6.setText(String.valueOf(y[5]));
+
+
+        cdt = new CountDownTimer(300000000,1000) {
+            @SuppressLint("SetTextI18n")
+            @Override
+            public void onTick(long millisUntilFinished) {
+                sec++;
+                if(sec < 60){
+                    if(min < 10){
+                        if(sec < 10){
+                            time.setText("0" + String.valueOf(min) + ":0" + String.valueOf(sec));
+                        }else{
+                            time.setText("0" +String.valueOf(min) + ":" + String.valueOf(sec));
+                        }
+                    }else{
+                        if(sec < 10){
+                            time.setText(String.valueOf(min) + ":0" + String.valueOf(sec));
+                        }else{
+                            time.setText(String.valueOf(min) + ":" + String.valueOf(sec));
+                        }
+
+                    }
+                }
+                if(sec == 60){
+                    sec = 0;
+                    min++;
+                    if(min < 10){
+                        time.setText("0" + String.valueOf(min) + ":0" + String.valueOf(sec));
+                    }else{
+                        time.setText(String.valueOf(min) + ":0" + String.valueOf(sec));
+                    }
+                }
+
+            }
+
+            @Override
+            public void onFinish() {
+                System.out.println("遊戲結束!!");
+            }
+        };
 
 
     }
@@ -193,19 +241,32 @@ public class MainActivity extends AppCompatActivity {
         sum(x[11]);
     }
     public void next(View v){    //下一關
-        if(page < 10){
-            ansRandom();
-            btnText();
-            que1.setText(String.valueOf(y[0]));
-            que2.setText(String.valueOf(y[1]));
-            que3.setText(String.valueOf(y[2]));
-            que4.setText(String.valueOf(y[3]));
-            que5.setText(String.valueOf(y[4]));
-            que6.setText(String.valueOf(y[5]));
+        if(page == 0){
+            next_stage.setText("下一關");
             page++;
+            cdt.start();
         }else{
-            page = 0;
+            if(page <= 10){
+                ansRandom();
+                btnText();
+                que1.setText(String.valueOf(y[0]));
+                que2.setText(String.valueOf(y[1]));
+                que3.setText(String.valueOf(y[2]));
+                que4.setText(String.valueOf(y[3]));
+                que5.setText(String.valueOf(y[4]));
+                que6.setText(String.valueOf(y[5]));
+                page++;
+                if(page > 10){
+                    next_stage.setText("結束");
+                    cdt.onFinish();
+                }
+
+            }else{
+                page = 0;
+                next_stage.setText("開始");
+            }
         }
+
     }
 
 
