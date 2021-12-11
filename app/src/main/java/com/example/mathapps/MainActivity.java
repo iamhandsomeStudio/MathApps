@@ -1,6 +1,5 @@
 package com.example.mathapps;
 
-import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
@@ -9,7 +8,6 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.renderscript.Sampler;
-import android.text.Html;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -26,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     int sum2,sub,count = 0,score = 0,page = 0,min = 0,sec = 0;
     Bundle extra;  //頁面傳值
     CountDownTimer cdt;
-    ActionBar mainActionBar;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -106,11 +104,7 @@ public class MainActivity extends AppCompatActivity {
             public void onFinish() {
                 System.out.println("遊戲結束!!");
             }
-
         };
-
-        mainActionBar = getSupportActionBar();
-
 
 
     }
@@ -250,7 +244,6 @@ public class MainActivity extends AppCompatActivity {
         if(page == 0){
             next_stage.setText("下一關");
             page++;
-            mainActionBar.setTitle("第"+String.valueOf(page)+"關");
             cdt.start();
         }else{
             if(page <= 10){
@@ -263,7 +256,6 @@ public class MainActivity extends AppCompatActivity {
                 que5.setText(String.valueOf(y[4]));
                 que6.setText(String.valueOf(y[5]));
                 page++;
-                mainActionBar.setTitle("第"+String.valueOf(page)+"關");
                 if(page > 10){
                     next_stage.setText("結束");
                     cdt.onFinish();
