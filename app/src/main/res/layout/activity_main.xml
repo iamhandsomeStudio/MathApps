@@ -288,32 +288,20 @@
         android:orientation="vertical">
 
         <TextView
+            android:id="@+id/time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Time" />
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="50dp">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Name" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Name_text"
-                android:layout_marginLeft="10dp"
-                android:id="@+id/name"/>
+            android:text="Time"
+            android:textSize="25sp"
+            android:layout_gravity="center"/>
 
-
-        </LinearLayout>
 
         <Button
+            android:id="@+id/next_stage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="45dp"
-            android:layout_marginTop="190dp"
+            android:layout_marginTop="250dp"
             android:onClick="next"
             android:text="@string/next" />
 
