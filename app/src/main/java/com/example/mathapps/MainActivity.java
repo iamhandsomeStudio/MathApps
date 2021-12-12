@@ -257,7 +257,7 @@ public class MainActivity extends AppCompatActivity {
             //mainActionBar.setTitle("第"+String.valueOf(page)+"關");
             cdt.start();
         }else{
-            if(page <= 10){
+            if(page < 10){
                 ansRandom();
                 btnText();
                 que1.setText(valueOf(y[0]));
@@ -268,15 +268,14 @@ public class MainActivity extends AppCompatActivity {
                 que6.setText(valueOf(y[5]));
                 page++;
                 stage.setText(format("第%d關", page));
-                if(page > 10){
+                if(page == 10){
                     next_stage.setText("結束");
-                    cdt.onFinish();
                 }
-
             }else{
                 page = 0;
-                next_stage.setText("開始");
+                cdt.cancel();
             }
+
         }
 
     }
