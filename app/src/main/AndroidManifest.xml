@@ -12,7 +12,7 @@
         <activity
             android:name=".RankActivity"
             android:exported="false"
-            android:theme="@style/Theme.NoActionBar"/>
+            android:theme="@style/Theme.AppCompat.Light.Dialog.MinWidth"/>
         <activity
             android:name=".ExplanationActivity"
             android:exported="false"

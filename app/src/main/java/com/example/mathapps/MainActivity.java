@@ -6,6 +6,7 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -29,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
     Bundle extra;  //頁面傳值
     CountDownTimer cdt;
     ActionBar mainActionBar;
+    Intent rankInt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -281,6 +283,8 @@ public class MainActivity extends AppCompatActivity {
             }else{
                 page = 0;
                 cdt.cancel();
+                rankInt = new Intent(MainActivity.this,RankActivity.class);
+                startActivity(rankInt);
             }
         }
 
