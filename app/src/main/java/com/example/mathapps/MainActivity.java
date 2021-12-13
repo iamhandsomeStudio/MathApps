@@ -4,13 +4,18 @@ import static java.lang.String.*;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 
+import android.Manifest;
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.os.Environment;
 import android.renderscript.Sampler;
 import android.text.Html;
 import android.util.Log;
@@ -19,6 +24,8 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import org.w3c.dom.Text;
+
+import java.io.File;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -31,6 +38,8 @@ public class MainActivity extends AppCompatActivity {
     CountDownTimer cdt;
     ActionBar mainActionBar;
     Intent rankInt;
+    File dir;
+    Context context;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +47,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);/*Test*/
 
         extra = getIntent().getExtras();
+        dir = new File(context.getExternalFilesDir("/sdcard") , "MathApp");
+        if(!dir.exists()){
+            dir.mkdirs();
+        }
 
         que1 = (TextView)findViewById(R.id.quesOne);
         que2 = (TextView)findViewById(R.id.quesTwo);
@@ -71,6 +84,7 @@ public class MainActivity extends AppCompatActivity {
         que4.setText(valueOf(y[3]));
         que5.setText(valueOf(y[4]));
         que6.setText(valueOf(y[5]));
+
 
 
         cdt = new CountDownTimer(300000000,1000) {
@@ -114,8 +128,6 @@ public class MainActivity extends AppCompatActivity {
         };
 
         mainActionBar = getSupportActionBar();
-
-
 
     }
 
