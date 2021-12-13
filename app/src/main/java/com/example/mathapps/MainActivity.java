@@ -13,6 +13,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.Environment;
@@ -25,7 +26,9 @@ import android.widget.TextView;
 
 import org.w3c.dom.Text;
 
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileWriter;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -38,8 +41,7 @@ public class MainActivity extends AppCompatActivity {
     CountDownTimer cdt;
     ActionBar mainActionBar;
     Intent rankInt;
-    File dir;
-    Context context;
+    File file;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,9 +49,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);/*Test*/
 
         extra = getIntent().getExtras();
-        dir = new File(context.getExternalFilesDir("/sdcard") , "MathApp");
-        if(!dir.exists()){
-            dir.mkdirs();
+        file = new File(getExternalFilesDir(null),"MathApp2.txt");
+        try{
+            BufferedWriter writer = new BufferedWriter(new FileWriter(file));
+            writer.write("b");
+            writer.flush();
+            writer.close();
+        } catch (Exception e) {
+            e.printStackTrace();
         }
 
         que1 = (TextView)findViewById(R.id.quesOne);
