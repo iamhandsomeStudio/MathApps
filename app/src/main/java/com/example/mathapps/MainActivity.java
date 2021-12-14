@@ -358,7 +358,6 @@ public class MainActivity extends AppCompatActivity {
             scoreText.setText(String.valueOf(score));
         }else if(extra.getString("ex").equals("減法")){
             sub = Math.abs(sub) - a;
-            System.out.println(sub);
             if(y[0] == Math.abs(sub) && count == 2){
                 que1.setText("完成");
                 score += 10;
@@ -576,6 +575,8 @@ public class MainActivity extends AppCompatActivity {
 
 
         }*/
+
+
 
         if(count > 2){
             count = 0;
