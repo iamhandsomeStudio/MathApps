@@ -350,6 +350,7 @@ public class MainActivity extends AppCompatActivity {
                 count = 0;
                 btnColor();
             }
+            scoreText.setText(String.valueOf(score));
         }else if(extra.getString("ex").equals("減法")){
             sub = Math.abs(sub) - a;
             if(y[0] == Math.abs(sub) && count == 2){
@@ -393,6 +394,7 @@ public class MainActivity extends AppCompatActivity {
                 count = 0;
                 btnColor();
             }
+            scoreText.setText(String.valueOf(score));
         }
 
     }
