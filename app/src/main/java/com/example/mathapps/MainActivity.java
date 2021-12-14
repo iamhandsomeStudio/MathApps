@@ -49,15 +49,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);/*Test*/
 
         extra = getIntent().getExtras();
-        file = new File(getExternalFilesDir(null),"MathApp2.txt");
-        try{
-            BufferedWriter writer = new BufferedWriter(new FileWriter(file));
-            writer.write("b");
-            writer.flush();
-            writer.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
 
         que1 = (TextView)findViewById(R.id.quesOne);
         que2 = (TextView)findViewById(R.id.quesTwo);
@@ -91,7 +82,6 @@ public class MainActivity extends AppCompatActivity {
         que4.setText(valueOf(y[3]));
         que5.setText(valueOf(y[4]));
         que6.setText(valueOf(y[5]));
-
 
 
         cdt = new CountDownTimer(300000000,1000) {
@@ -302,6 +292,16 @@ public class MainActivity extends AppCompatActivity {
             }else{
                 page = 0;
                 cdt.cancel();
+                file = new File(getExternalFilesDir(null),"MathApp.csv");
+                try{
+                    BufferedWriter writer = new BufferedWriter(new FileWriter(file,true));
+                    writer.write(extra.getString("name") + "," + scoreText.getText() + "," + time.getText());
+                    writer.newLine();
+                    writer.flush();
+                    writer.close();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
                 rankInt = new Intent(MainActivity.this,RankActivity.class);
                 startActivity(rankInt);
             }

@@ -65,7 +65,7 @@ public class SelectActivity extends AppCompatActivity {
 
     public void start(View v){
         Intent intent = new Intent(SelectActivity.this,MainActivity.class);
-        intent.putExtra("name", nameEditText.getText());
+        intent.putExtra("name", nameEditText.getText().toString());
         intent.putExtra("dif",dif_spinner.getSelectedItem().toString());
         intent.putExtra("ex",ex_spinner.getSelectedItem().toString());
         startActivity(intent);
