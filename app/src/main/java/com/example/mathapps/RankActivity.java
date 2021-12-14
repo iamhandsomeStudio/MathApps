@@ -1,17 +1,51 @@
 package com.example.mathapps;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.widget.FrameLayout;
 
+import com.opencsv.CSVReader;
+
+import java.io.BufferedInputStream;
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
+
 public class RankActivity extends AppCompatActivity {
 
+    private RecyclerView rankReccycleView;
+    private RecyclerView.LayoutManager mLayoutManager;
+    private ItemAdapter itemAdapter;
+    LinkedList<HashMap<String, String>> csvList;
+    private String fileName = "gamer.csv";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rank);
 
+
+        rankReccycleView = findViewById(R.id.recyclerView);
+        rankReccycleView.setHasFixedSize(true);
+
+        //use a linear layout manager
+        mLayoutManager = new LinearLayoutManager(this);
+        rankReccycleView.setLayoutManager(mLayoutManager);
+
+        //specify an adapter (see also next example)
+        /*itemAdapter = new ItemAdapter(this);
+        rankReccycleView.setAdapter(itemAdapter);*/
+
+        //csvList = new LinkedList<>();
 
     }
 }
