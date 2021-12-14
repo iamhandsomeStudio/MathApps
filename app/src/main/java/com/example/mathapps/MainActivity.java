@@ -192,6 +192,7 @@ public class MainActivity extends AppCompatActivity {
         x[0] = Integer.parseInt(valueOf(btn.getText()));
         btn.setBackgroundTintList(ColorStateList.valueOf(Color.BLUE));
         sum(x[0]);
+
     }
     public void click_2(View v){
         countGet();
@@ -570,9 +571,15 @@ public class MainActivity extends AppCompatActivity {
 
     public void countGet(){
         count++;
+        /*if((btn.isClickable() || btn2.isClickable() || btn3.isClickable() || btn4.isClickable() || btn5.isClickable() || btn6.isClickable() ||
+                btn7.isClickable() || btn8.isClickable() || btn9.isClickable() || btn10.isClickable() || btn11.isClickable() || btn12.isClickable()) && count == 1){
+
+
+        }*/
+
         if(count > 2){
             count = 0;
         }
-        System.out.println(count);
     }
+
 }
