@@ -563,6 +563,21 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public void btn_SW(){
+        btn.setEnabled(false);
+        btn2.setEnabled(false);
+        btn3.setEnabled(false);
+        btn4.setEnabled(false);
+        btn5.setEnabled(false);
+        btn6.setEnabled(false);
+        btn7.setEnabled(false);
+        btn8.setEnabled(false);
+        btn9.setEnabled(false);
+        btn10.setEnabled(false);
+        btn11.setEnabled(false);
+        btn12.setEnabled(false);
+    }
+
     public void countGet(){
         count++;
         /*if((btn.isClickable() || btn2.isClickable() || btn3.isClickable() || btn4.isClickable() || btn5.isClickable() || btn6.isClickable() ||
