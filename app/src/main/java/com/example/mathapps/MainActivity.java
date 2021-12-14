@@ -33,7 +33,7 @@ import java.io.FileWriter;
 public class MainActivity extends AppCompatActivity {
 
     Button btn,btn2,btn3,btn4,btn5,btn6,btn7,btn8,btn9,btn10,btn11,btn12,next_stage;
-    TextView que1,que2,que3,que4,que5,que6,time, stage,scoreText;
+    TextView que1,que2,que3,que4,que5,que6,time, stage, scoreText;
     int[] x = new int[12];
     int[] y = new int[6];
     int sum2,sub,count = 0,score = 0,page = 0,min = 0,sec = 0;
@@ -75,6 +75,8 @@ public class MainActivity extends AppCompatActivity {
 
         next_stage = (Button)findViewById(R.id.next_stage);
 
+        btnText();
+        ansRandom();
 
         que1.setText(valueOf(y[0]));
         que2.setText(valueOf(y[1]));
@@ -264,15 +266,7 @@ public class MainActivity extends AppCompatActivity {
         if(page == 0){
             next_stage.setText("下一關");
             page++;
-            btnText();
-            ansRandom();
             stage.setText(format("第%d關", page));
-            que1.setText(valueOf(y[0]));
-            que2.setText(valueOf(y[1]));
-            que3.setText(valueOf(y[2]));
-            que4.setText(valueOf(y[3]));
-            que5.setText(valueOf(y[4]));
-            que6.setText(valueOf(y[5]));
             //mainActionBar.setTitle("第"+String.valueOf(page)+"關");
             cdt.start();
         }else{
@@ -306,6 +300,7 @@ public class MainActivity extends AppCompatActivity {
                 rankInt = new Intent(MainActivity.this,RankActivity.class);
                 startActivity(rankInt);
             }
+
         }
 
     }
@@ -355,7 +350,6 @@ public class MainActivity extends AppCompatActivity {
                 count = 0;
                 btnColor();
             }
-            scoreText.setText(String.valueOf(score));
         }else if(extra.getString("ex").equals("減法")){
             sub = Math.abs(sub) - a;
             if(y[0] == Math.abs(sub) && count == 2){
@@ -399,7 +393,6 @@ public class MainActivity extends AppCompatActivity {
                 count = 0;
                 btnColor();
             }
-            scoreText.setText(String.valueOf(score));
         }
 
     }
