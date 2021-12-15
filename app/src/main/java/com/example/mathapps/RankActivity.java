@@ -11,6 +11,7 @@ import com.opencsv.CSVReader;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileReader;
 import java.io.IOException;
@@ -27,7 +28,9 @@ public class RankActivity extends AppCompatActivity {
     private RecyclerView.LayoutManager mLayoutManager;
     private ItemAdapter itemAdapter;
     LinkedList<HashMap<String, String>> csvList;
-    private String fileName = "gamer.csv";
+    private String fileName = "MathApp.csv";
+    private File completeExternalPath = null;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,11 +44,38 @@ public class RankActivity extends AppCompatActivity {
         mLayoutManager = new LinearLayoutManager(this);
         rankReccycleView.setLayoutManager(mLayoutManager);
 
+
         //specify an adapter (see also next example)
         /*itemAdapter = new ItemAdapter(this);
         rankReccycleView.setAdapter(itemAdapter);*/
 
         //csvList = new LinkedList<>();
+        readCsv();
+    }
 
+    public void readCsv()
+    {
+        FileInputStream fos = null;
+
+        BufferedInputStream buffered = null;
+        completeExternalPath = new File(String.valueOf(getExternalFilesDir(fileName)));
+
+        try{
+            fos = new FileInputStream(completeExternalPath);
+            InputStreamReader inputStreamReader = new InputStreamReader(fos);
+            BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
+            StringBuilder stringBuilder = new StringBuilder();
+            String text = null;
+
+            while ((text = bufferedReader.readLine()) != null) {
+                stringBuilder.append(text);
+            }
+            fos.close();
+            System.out.println(stringBuilder);
+
+        }catch (Exception e)
+        {
+            e.printStackTrace();
+        }
     }
 }
