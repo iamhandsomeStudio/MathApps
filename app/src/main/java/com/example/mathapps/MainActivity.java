@@ -193,6 +193,7 @@ public class MainActivity extends AppCompatActivity {
         countGet();
         x[0] = Integer.parseInt(valueOf(btn.getText()));
         btn.setBackgroundTintList(ColorStateList.valueOf(Color.BLUE));
+        btn.setEnabled(false);
         sum(x[0]);
 
     }
@@ -200,66 +201,77 @@ public class MainActivity extends AppCompatActivity {
         countGet();
         x[1] = Integer.parseInt(valueOf(btn2.getText()));
         btn2.setBackgroundTintList(ColorStateList.valueOf(Color.BLUE));
+        btn2.setEnabled(false);
         sum(x[1]);
     }
     public void click_3(View v){
         countGet();
         x[2] = Integer.parseInt(valueOf(btn3.getText()));
         btn3.setBackgroundTintList(ColorStateList.valueOf(Color.BLUE));
+        btn3.setEnabled(false);
         sum(x[2]);
     }
     public void click_4(View v){
         countGet();
         x[3] = Integer.parseInt(valueOf(btn4.getText()));
         btn4.setBackgroundTintList(ColorStateList.valueOf(Color.BLUE));
+        btn4.setEnabled(false);
         sum(x[3]);
     }
     public void click_5(View v){
         countGet();
         x[4] = Integer.parseInt(valueOf(btn5.getText()));
         btn5.setBackgroundTintList(ColorStateList.valueOf(Color.BLUE));
+        btn5.setEnabled(false);
         sum(x[4]);
     }
     public void click_6(View v){
         countGet();
         x[5] = Integer.parseInt(valueOf(btn6.getText()));
         btn6.setBackgroundTintList(ColorStateList.valueOf(Color.BLUE));
+        btn6.setEnabled(false);
         sum(x[5]);
     }
     public void click_7(View v){
         countGet();
         x[6] = Integer.parseInt(valueOf(btn7.getText()));
         btn7.setBackgroundTintList(ColorStateList.valueOf(Color.BLUE));
+        btn7.setEnabled(false);
         sum(x[6]);
     }
     public void click_8(View v){
         countGet();
         x[7] = Integer.parseInt(valueOf(btn8.getText()));
         btn8.setBackgroundTintList(ColorStateList.valueOf(Color.BLUE));
+        btn8.setEnabled(false);
         sum(x[7]);
     }
     public void click_9(View v){
         countGet();
         x[8] = Integer.parseInt(valueOf(btn9.getText()));
         btn9.setBackgroundTintList(ColorStateList.valueOf(Color.BLUE));
+        btn9.setEnabled(false);
         sum(x[8]);
     }
     public void click_10(View v){
         countGet();
         x[9] = Integer.parseInt(valueOf(btn10.getText()));
         btn10.setBackgroundTintList(ColorStateList.valueOf(Color.BLUE));
+        btn10.setEnabled(false);
         sum(x[9]);
     }
     public void click_11(View v){
         countGet();
         x[10] = Integer.parseInt(valueOf(btn11.getText()));
         btn11.setBackgroundTintList(ColorStateList.valueOf(Color.BLUE));
+        btn11.setEnabled(false);
         sum(x[10]);
     }
     public void click_12(View v){
         countGet();
         x[11] = Integer.parseInt(valueOf(btn12.getText()));
         btn12.setBackgroundTintList(ColorStateList.valueOf(Color.BLUE));
+        btn12.setEnabled(false);
         sum(x[11]);
     }
     public void next(View v){    //下一關
@@ -315,40 +327,47 @@ public class MainActivity extends AppCompatActivity {
                 sum2 = 0;
                 count = 0;
                 btnColor();
+                btn_SW();
             }else if(y[1] == sum2 && count == 2){
                 que2.setText("完成");
                 score += 10;
                 sum2 = 0;
                 count = 0;
                 btnColor();
+                btn_SW();
             }else if(y[2] == sum2 && count == 2){
                 que3.setText("完成");
                 score += 10;
                 sum2 = 0;
                 count = 0;
                 btnColor();
+                btn_SW();
             }else if(y[3] == sum2 && count == 2){
                 que4.setText("完成");
                 score += 10;
                 sum2 = 0;
                 count = 0;
                 btnColor();
+                btn_SW();
             }else if(y[4] == sum2 && count == 2){
                 que5.setText("完成");
                 score += 10;
                 sum2 = 0;
                 count = 0;
                 btnColor();
+                btn_SW();
             }else if(y[5] == sum2 && count == 2){
                 que6.setText("完成");
                 score += 10;
                 sum2 = 0;
                 count = 0;
                 btnColor();
+                btn_SW();
             }else if(count == 2){
                 sum2 = 0;
                 count = 0;
                 btnColor();
+                btn_SW();
             }
             scoreText.setText(String.valueOf(score));
         }else if(extra.getString("ex").equals("減法")){
@@ -359,40 +378,47 @@ public class MainActivity extends AppCompatActivity {
                 sub = 0;
                 count = 0;
                 btnColor();
+                btn_SW();
             }else if(y[1] == Math.abs(sub) && count == 2){
                 que2.setText("完成");
                 score += 10;
                 sub = 0;
                 count = 0;
                 btnColor();
+                btn_SW();
             }else if(y[2] == Math.abs(sub) && count == 2){
                 que3.setText("完成");
                 score += 10;
                 sub = 0;
                 count = 0;
                 btnColor();
+                btn_SW();
             }else if(y[3] == Math.abs(sub) && count == 2){
                 que4.setText("完成");
                 score += 10;
                 sub = 0;
                 count = 0;
                 btnColor();
+                btn_SW();
             }else if(y[4] == Math.abs(sub) && count == 2){
                 que5.setText("完成");
                 score += 10;
                 sub = 0;
                 count = 0;
                 btnColor();
+                btn_SW();
             }else if(y[5] == Math.abs(sub) && count == 2){
                 que6.setText("完成");
                 score += 10;
                 sub = 0;
                 count = 0;
                 btnColor();
+                btn_SW();
             }else if(count == 2){
                 sub = 0;
                 count = 0;
                 btnColor();
+                btn_SW();
             }
             scoreText.setText(String.valueOf(score));
         }
@@ -564,18 +590,18 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void btn_SW(){
-        btn.setEnabled(false);
-        btn2.setEnabled(false);
-        btn3.setEnabled(false);
-        btn4.setEnabled(false);
-        btn5.setEnabled(false);
-        btn6.setEnabled(false);
-        btn7.setEnabled(false);
-        btn8.setEnabled(false);
-        btn9.setEnabled(false);
-        btn10.setEnabled(false);
-        btn11.setEnabled(false);
-        btn12.setEnabled(false);
+        btn.setEnabled(true);
+        btn2.setEnabled(true);
+        btn3.setEnabled(true);
+        btn4.setEnabled(true);
+        btn5.setEnabled(true);
+        btn6.setEnabled(true);
+        btn7.setEnabled(true);
+        btn8.setEnabled(true);
+        btn9.setEnabled(true);
+        btn10.setEnabled(true);
+        btn11.setEnabled(true);
+        btn12.setEnabled(true);
     }
 
     public void countGet(){
