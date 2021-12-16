@@ -1,10 +1,23 @@
 package com.example.mathapps;
 
-import androidx.appcompat.app.AppCompatActivity;
+import static android.Manifest.permission.MANAGE_EXTERNAL_STORAGE;
+import static android.Manifest.permission.MOUNT_UNMOUNT_FILESYSTEMS;
+import static android.Manifest.permission.READ_EXTERNAL_STORAGE;
+import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+
+import android.Manifest;
+import android.app.Activity;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.widget.Toast;
 
 public class WelcomeActivity extends AppCompatActivity {
 
@@ -12,11 +25,7 @@ public class WelcomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
-        new Handler().postDelayed(() -> {
-            Intent startLandingPageActivity = new Intent(WelcomeActivity.this, ExplanationActivity.class);
-            startActivity(startLandingPageActivity);
-            },5000);
-
+        nextPage();
     }
 
     @Override
@@ -24,5 +33,10 @@ public class WelcomeActivity extends AppCompatActivity {
         super.onPause();
         finish();
     }
-
+    private void nextPage(){
+        new Handler().postDelayed(() -> {
+            Intent startLandingPageActivity = new Intent(WelcomeActivity.this, ExplanationActivity.class);
+            startActivity(startLandingPageActivity);
+        },5000);
+    }
 }

@@ -1,14 +1,23 @@
 package com.example.mathapps;
 
+import static android.Manifest.permission.MANAGE_EXTERNAL_STORAGE;
+import static android.Manifest.permission.MOUNT_UNMOUNT_FILESYSTEMS;
+import static android.Manifest.permission.READ_EXTERNAL_STORAGE;
+import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
+
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import java.util.Random;
 
@@ -64,11 +73,14 @@ public class SelectActivity extends AppCompatActivity {
     }
 
     public void start(View v){
+
         Intent intent = new Intent(SelectActivity.this,MainActivity.class);
         intent.putExtra("name", nameEditText.getText().toString());
         intent.putExtra("dif",dif_spinner.getSelectedItem().toString());
         intent.putExtra("ex",ex_spinner.getSelectedItem().toString());
         startActivity(intent);
-
     }
+
+
+
 }

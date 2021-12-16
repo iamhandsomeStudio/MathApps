@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">排名</string>
+    <string name="app_name">數字練習遊戲</string>
     <string name="question">問題</string>
     <string name="ques_one">1:</string>
     <string name="ques_two">2:</string>
