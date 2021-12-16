@@ -7,7 +7,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 import android.widget.FrameLayout;
 
-import com.opencsv.CSVReader;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;
