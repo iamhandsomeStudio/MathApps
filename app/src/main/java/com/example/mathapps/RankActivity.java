@@ -50,6 +50,8 @@ public class RankActivity extends AppCompatActivity {
 
         //csvList = new LinkedList<>();
         readCsv();
+        itemAdapter = new ItemAdapter(csvList);
+        rankReccycleView.setAdapter(itemAdapter);
     }
 
     public void readCsv()
@@ -72,8 +74,8 @@ public class RankActivity extends AppCompatActivity {
                 csvList.add(str);
             }
             fos.close();
-            itemAdapter = new ItemAdapter(csvList);
-            rankReccycleView.setAdapter(itemAdapter);
+
+
             /*(int i=0;i<csvList.size();i++){
                 for (int j=0;j < csvList.get(i).length;j++){
 

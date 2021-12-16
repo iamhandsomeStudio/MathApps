@@ -51,12 +51,12 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
     public void onBindViewHolder(@NonNull ItemAdapter.ViewHolder holder, int position) {
 
         //holder.stage.setText(stages.get(0));
-        holder.name.setText(stages.get(0)[position]);
-        System.out.println(stages.get(0)[position]);
-        //holder.score.setText(stages.get(2).toString());
-        //holder.totalTime.setText(stages.get(3).toString());
+        holder.name.setText(stages.get(position)[0]);
+        //System.out.println(stages.get(position)[0]);
+        holder.score.setText(stages.get(position)[1]);
+        holder.totalTime.setText(stages.get(position)[2]);
 
-        //System.out.println(stages.get(0).length);
+        System.out.println("length " +stages.size());
         //System.out.println(stages.get(1)[0]);
         //System.out.println(stages.get(2).toString());
         //System.out.println(stages.get(3).toString());

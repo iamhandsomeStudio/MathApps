@@ -22,6 +22,7 @@
         <activity
             android:name=".RankActivity"
             android:exported="false"
+            android:screenOrientation="landscape"
             android:theme="@style/Theme.AppCompat.Dialog.MinWidth"/>
         <activity
             android:name=".ExplanationActivity"
