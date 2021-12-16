@@ -77,6 +77,7 @@ public class MainActivity extends AppCompatActivity {
 
         btnText();
         ansRandom();
+        btn_SW();
 
         que1.setText(valueOf(y[0]));
         que2.setText(valueOf(y[1]));
@@ -84,6 +85,7 @@ public class MainActivity extends AppCompatActivity {
         que4.setText(valueOf(y[3]));
         que5.setText(valueOf(y[4]));
         que6.setText(valueOf(y[5]));
+
 
 
         cdt = new CountDownTimer(300000000,1000) {
@@ -280,6 +282,7 @@ public class MainActivity extends AppCompatActivity {
             page++;
             stage.setText(format("第%d關", page));
             //mainActionBar.setTitle("第"+String.valueOf(page)+"關");
+            btn_SW();
             cdt.start();
         }else{
             if(page < 10){
@@ -590,30 +593,38 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void btn_SW(){
-        btn.setEnabled(true);
-        btn2.setEnabled(true);
-        btn3.setEnabled(true);
-        btn4.setEnabled(true);
-        btn5.setEnabled(true);
-        btn6.setEnabled(true);
-        btn7.setEnabled(true);
-        btn8.setEnabled(true);
-        btn9.setEnabled(true);
-        btn10.setEnabled(true);
-        btn11.setEnabled(true);
-        btn12.setEnabled(true);
+        if(next_stage.getText().equals("開始")){
+            btn.setEnabled(false);
+            btn2.setEnabled(false);
+            btn3.setEnabled(false);
+            btn4.setEnabled(false);
+            btn5.setEnabled(false);
+            btn6.setEnabled(false);
+            btn7.setEnabled(false);
+            btn8.setEnabled(false);
+            btn9.setEnabled(false);
+            btn10.setEnabled(false);
+            btn11.setEnabled(false);
+            btn12.setEnabled(false);
+        }else{
+            btn.setEnabled(true);
+            btn2.setEnabled(true);
+            btn3.setEnabled(true);
+            btn4.setEnabled(true);
+            btn5.setEnabled(true);
+            btn6.setEnabled(true);
+            btn7.setEnabled(true);
+            btn8.setEnabled(true);
+            btn9.setEnabled(true);
+            btn10.setEnabled(true);
+            btn11.setEnabled(true);
+            btn12.setEnabled(true);
+        }
+
     }
 
     public void countGet(){
         count++;
-        /*if((btn.isClickable() || btn2.isClickable() || btn3.isClickable() || btn4.isClickable() || btn5.isClickable() || btn6.isClickable() ||
-                btn7.isClickable() || btn8.isClickable() || btn9.isClickable() || btn10.isClickable() || btn11.isClickable() || btn12.isClickable()) && count == 1){
-
-
-        }*/
-
-
-
         if(count > 2){
             count = 0;
         }
