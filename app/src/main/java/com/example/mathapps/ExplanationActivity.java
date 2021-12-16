@@ -23,9 +23,7 @@ public class ExplanationActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_explanation);
         int writePermission = ActivityCompat.checkSelfPermission(this, WRITE_EXTERNAL_STORAGE);
-        //int readPermission = ActivityCompat.checkSelfPermission(this, READ_EXTERNAL_STORAGE);
-        //int mountPermission = ActivityCompat.checkSelfPermission(this, MOUNT_UNMOUNT_FILESYSTEMS);
-        //int ManagerPermission = ActivityCompat.checkSelfPermission(this, MANAGE_EXTERNAL_STORAGE);
+
         nextButton = findViewById(R.id.button);
         if(writePermission != PackageManager.PERMISSION_GRANTED){
             ActivityCompat.requestPermissions(
