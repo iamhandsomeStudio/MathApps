@@ -295,7 +295,7 @@ public class MainActivity extends AppCompatActivity {
                 que5.setText(valueOf(y[4]));
                 que6.setText(valueOf(y[5]));
                 page++;
-                stage.setText(format("第%d關", page));
+                stage.setText(format("第%d關"+"\n"+"答案", page));
                 if(page == 10){
                     next_stage.setText("結束");
                 }

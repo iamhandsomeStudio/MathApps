@@ -12,6 +12,7 @@
     <string name="start">開始玩</string>
     <string name="name">玩家名字</string>
     <string name="next">下一關</string>
+    <string name="rank">排名</string>
     <string-array name="difficult_array">
         <item>一</item>
         <item>二</item>
