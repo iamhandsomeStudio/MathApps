@@ -280,7 +280,7 @@ public class MainActivity extends AppCompatActivity {
         if(page == 0){
             next_stage.setText("下一關");
             page++;
-            stage.setText(format("第%d關", page));
+            stage.setText(format("第%d關"+"\n"+"答案", page));
             //mainActionBar.setTitle("第"+String.valueOf(page)+"關");
             btn_SW();
             cdt.start();

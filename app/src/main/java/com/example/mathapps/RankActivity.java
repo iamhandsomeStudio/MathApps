@@ -26,7 +26,7 @@ public class RankActivity extends AppCompatActivity {
     private RecyclerView rankReccycleView;
     private RecyclerView.LayoutManager mLayoutManager;
     private ItemAdapter itemAdapter;
-    List<String> csvList = new ArrayList<String>();
+    List<String[]> csvList = new ArrayList<String[]>();
     private String fileName = "MathApp.csv";
     private File completeExternalPath = null;
 
@@ -64,13 +64,22 @@ public class RankActivity extends AppCompatActivity {
             InputStreamReader inputStreamReader = new InputStreamReader(fos);
             BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
             StringBuilder stringBuilder = new StringBuilder();
+            String[] str ;
             String text = null;
 
             while ((text = bufferedReader.readLine()) != null) {
-                csvList.add(text);
+                str = text.split(",");
+                csvList.add(str);
             }
             fos.close();
-            System.out.println(csvList);
+            itemAdapter = new ItemAdapter(csvList);
+            rankReccycleView.setAdapter(itemAdapter);
+            /*(int i=0;i<csvList.size();i++){
+                for (int j=0;j < csvList.get(i).length;j++){
+
+                }
+            }*/
+            //System.out.println(csvList.get(0).length);
 
         }catch (Exception e)
         {
