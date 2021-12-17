@@ -86,6 +86,18 @@ public class MainActivity extends AppCompatActivity {
         que5.setText(valueOf(y[4]));
         que6.setText(valueOf(y[5]));
 
+        file = new File(getExternalFilesDir(null),"MathApp.csv");
+        if(!file.exists()){
+            try{
+                BufferedWriter w_title = new BufferedWriter(new FileWriter(file,true));
+                w_title.write("名次," + "名字," + "分數," + "時間,");
+                w_title.newLine();
+                w_title.flush();
+                w_title.close();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
 
 
         cdt = new CountDownTimer(300000000,1000) {
@@ -302,7 +314,7 @@ public class MainActivity extends AppCompatActivity {
             }else{
                 page = 0;
                 cdt.cancel();
-                file = new File(getExternalFilesDir(null),"MathApp.csv");
+                //file = new File(getExternalFilesDir(null),"MathApp.csv");
                 try{
                     BufferedWriter writer = new BufferedWriter(new FileWriter(file,true));
                     writer.write(extra.getString("name") + "," + scoreText.getText() + "," + time.getText());
