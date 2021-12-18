@@ -67,7 +67,6 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
         stages.sort(new Comparator<String[]>() {
             @Override
             public int compare(String[] strings, String[] t1) {
-                System.out.println("Return "+Integer.compare(Integer.parseInt(strings[1]),Integer.parseInt(t1[1])));
                 return -Integer.compare(Integer.parseInt(strings[1]),Integer.parseInt(t1[1]));
             }
         });
@@ -77,6 +76,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
         Date preTime, currentTime;
         for(int i = 0;i < stages.size(); i++) {
             int score = Integer.parseInt(stages.get(i)[1]);
+
             if(Integer.compare(preScore, score) != 0){
                 preScore = score;
                 System.out.println(stage);
@@ -85,6 +85,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
             }else{
                 stageData.add(String.valueOf(stage));
             }
+
             //stageData.add(String.valueOf(stage));
             System.out.println(stage);
         }
@@ -93,7 +94,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
         //System.out.println(stages.get(position));
         holder.score.setText(stages.get(position)[1]);
         holder.totalTime.setText(stages.get(position)[2]);
-        holder.different.setText(stages.get(position)[3]);
+        //holder.different.setText(stages.get(position)[3]);
         System.out.println("length " +stages.size());
         //System.out.println(stages.get(1)[0]);
         //System.out.println(stages.get(2).toString());
@@ -116,7 +117,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
             name = itemView.findViewById(R.id.item_name);
             score = itemView.findViewById(R.id.item_score);
             totalTime = itemView.findViewById(R.id.item_totalTime);
-            different = itemView.findViewById(R.id.different_text);
+            //different = itemView.findViewById(R.id.different_text);
         }
     }
 

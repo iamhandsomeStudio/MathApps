@@ -81,7 +81,9 @@ public class RankActivity extends AppCompatActivity {
 
             while ((text = bufferedReader.readLine()) != null) {
                 str = text.split(",");
-                csvList.add(str);
+                if(str[3].equals(String.valueOf(different))){
+                    csvList.add(str);
+                }
             }
             fos.close();
 
@@ -111,28 +113,5 @@ public class RankActivity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
         finish();
-    }
-
-    public int stringToInt(String str)
-    {
-        int number = 0;
-        switch (str){
-            case "一":
-                number = 1;
-                break;
-            case "二":
-                number = 2;
-                break;
-            case "三":
-                number = 3;
-                break;
-            case "四":
-                number = 4;
-                break;
-            case "五":
-                number = 5;
-                break;
-        }
-        return number;
     }
 }
