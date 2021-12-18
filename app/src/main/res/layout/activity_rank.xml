@@ -14,7 +14,7 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="200dp" />
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -24,6 +24,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:onClick="again_onClick"
                 android:text="再玩一次" />
 
             <Button
@@ -31,9 +32,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:onClick="end_onClick"
                 android:text="結束遊戲" />
         </LinearLayout>
     </LinearLayout>
-
-
 </FrameLayout>

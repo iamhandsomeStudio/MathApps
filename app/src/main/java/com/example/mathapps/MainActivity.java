@@ -327,6 +327,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 rankInt = new Intent(MainActivity.this,RankActivity.class);
                 startActivity(rankInt);
+                next_stage.setEnabled(false);
             }
 
         }

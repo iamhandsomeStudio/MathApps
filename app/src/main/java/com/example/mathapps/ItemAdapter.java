@@ -13,9 +13,11 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import org.w3c.dom.Text;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
@@ -25,6 +27,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
     private Context mContext;
     private List<String[]>stages;
     private List<String> stageData ;
+
     //private LinkedList<HashMap<String, String>> data;
 
     public ItemAdapter(Context context)
@@ -69,6 +72,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
         //排名計算
         int stage = 0; //排名
         int preScore = -1; //前一次的分數
+        Date preTime, currentTime;
         for(int i = 0;i < stages.size(); i++) {
             int score = Integer.parseInt(stages.get(i)[1]);
             if(Integer.compare(preScore, score) != 0){

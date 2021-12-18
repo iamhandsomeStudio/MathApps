@@ -6,7 +6,9 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.Dialog;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.view.Window;
 import android.widget.FrameLayout;
 
@@ -32,7 +34,7 @@ public class RankActivity extends AppCompatActivity {
     List<String[]> csvList = new ArrayList<String[]>();
     private String fileName = "MathApp.csv";
     private File completeExternalPath = null;
-
+    Intent rankInt;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -90,5 +92,19 @@ public class RankActivity extends AppCompatActivity {
         {
             e.printStackTrace();
         }
+    }
+
+    public void again_onClick(View v){
+        rankInt = new Intent(RankActivity.this, SelectActivity.class);
+        startActivity(rankInt);
+    }
+
+    public void end_onClick(View v){
+        finish();
+    }
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        finish();
     }
 }
