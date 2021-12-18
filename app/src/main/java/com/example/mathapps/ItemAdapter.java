@@ -24,13 +24,13 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
 
     private Context mContext;
     private List<String[]>stages;
-    private List<List<String[]>> data ;
+    private List<String> stageData ;
     //private LinkedList<HashMap<String, String>> data;
 
     public ItemAdapter(Context context)
     {
         this.mContext = context;
-        doData();
+        //doData();
     }
 
     public ItemAdapter(List<String[]> strings)
@@ -57,6 +57,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
     public void onBindViewHolder(@NonNull ItemAdapter.ViewHolder holder, int position) {
 
         //holder.stage.setText(stages.get(0));
+        stageData = new ArrayList<>();
         //以成績作為陣列排序的方式
         stages.sort(new Comparator<String[]>() {
             @Override
@@ -72,14 +73,20 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
             int score = Integer.parseInt(stages.get(i)[1]);
             if(Integer.compare(preScore, score) != 0){
                 preScore = score;
+                System.out.println(stage);
                 stage++;
+                stageData.add(String.valueOf(stage));
+            }else{
+                stageData.add(String.valueOf(stage));
             }
-            holder.stage.setText(String.valueOf(stage));
-            holder.name.setText(stages.get(position)[0]);
-            //System.out.println(stages.get(position));
-            holder.score.setText(stages.get(position)[1]);
-            holder.totalTime.setText(stages.get(position)[2]);
+            //stageData.add(String.valueOf(stage));
+            System.out.println(stage);
         }
+        holder.stage.setText(stageData.get(position));
+        holder.name.setText(stages.get(position)[0]);
+        //System.out.println(stages.get(position));
+        holder.score.setText(stages.get(position)[1]);
+        holder.totalTime.setText(stages.get(position)[2]);
         System.out.println("length " +stages.size());
         //System.out.println(stages.get(1)[0]);
         //System.out.println(stages.get(2).toString());
@@ -105,7 +112,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
         }
     }
 
-    private void doData()
+    /*private void doData()
     {
         data = new LinkedList<>();
         for(int i=0;i<100;i++)
@@ -117,5 +124,5 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
             //data.add(row);
         }
 
-    }
+    }*/
 }
