@@ -326,6 +326,7 @@ public class MainActivity extends AppCompatActivity {
                     e.printStackTrace();
                 }
                 rankInt = new Intent(MainActivity.this,RankActivity.class);
+                rankInt.putExtra("dif",dif);
                 startActivity(rankInt);
                 next_stage.setEnabled(false);
             }

@@ -51,8 +51,9 @@ public class RankActivity extends AppCompatActivity {
         rankReccycleView.setLayoutManager(mLayoutManager);
 
         extra = getIntent().getExtras();
-        different = stringToInt(extra.getString("dif"));
-        System.out.println(different);
+        //System.out.println(extra.getString("dif"));
+        different = extra.getInt("dif");
+        //System.out.println(different);
         //specify an adapter (see also next example)
         /*itemAdapter = new ItemAdapter(this);
         rankReccycleView.setAdapter(itemAdapter);*/
