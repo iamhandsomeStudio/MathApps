@@ -18,14 +18,20 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <Button
+                android:id="@+id/again"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"/>
+                android:layout_weight="1"
+                android:text="再玩一次" />
+
             <Button
+                android:id="@+id/end"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"/>
+                android:layout_weight="1"
+                android:text="結束遊戲" />
         </LinearLayout>
     </LinearLayout>
 

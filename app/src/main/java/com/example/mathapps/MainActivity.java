@@ -87,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
         que6.setText(valueOf(y[5]));
 
         file = new File(getExternalFilesDir(null),"MathApp.csv");
-        if(!file.exists()){
+        /*if(!file.exists()){
             try{
                 BufferedWriter w_title = new BufferedWriter(new FileWriter(file,true));
                 w_title.write("名次," + "名字," + "分數," + "時間,");
@@ -97,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
             } catch (Exception e) {
                 e.printStackTrace();
             }
-        }
+        }*/
 
 
         cdt = new CountDownTimer(300000000,1000) {
@@ -336,42 +336,42 @@ public class MainActivity extends AppCompatActivity {
     public void sum(int a){
         if(extra.getString("ex").equals("加法")){
             sum2 += a;
-            if(y[0] == sum2 && count == 2){
+            if(y[0] == sum2 && count == 2 && !que1.getText().equals("完成")){
                 que1.setText("完成");
                 score += 10;
                 sum2 = 0;
                 count = 0;
                 btnColor();
                 btn_SW();
-            }else if(y[1] == sum2 && count == 2){
+            }else if(y[1] == sum2 && count == 2 && !que2.getText().equals("完成")){
                 que2.setText("完成");
                 score += 10;
                 sum2 = 0;
                 count = 0;
                 btnColor();
                 btn_SW();
-            }else if(y[2] == sum2 && count == 2){
+            }else if(y[2] == sum2 && count == 2 && !que3.getText().equals("完成")){
                 que3.setText("完成");
                 score += 10;
                 sum2 = 0;
                 count = 0;
                 btnColor();
                 btn_SW();
-            }else if(y[3] == sum2 && count == 2){
+            }else if(y[3] == sum2 && count == 2 && !que4.getText().equals("完成")){
                 que4.setText("完成");
                 score += 10;
                 sum2 = 0;
                 count = 0;
                 btnColor();
                 btn_SW();
-            }else if(y[4] == sum2 && count == 2){
+            }else if(y[4] == sum2 && count == 2 && !que5.getText().equals("完成")){
                 que5.setText("完成");
                 score += 10;
                 sum2 = 0;
                 count = 0;
                 btnColor();
                 btn_SW();
-            }else if(y[5] == sum2 && count == 2){
+            }else if(y[5] == sum2 && count == 2 && !que6.getText().equals("完成")){
                 que6.setText("完成");
                 score += 10;
                 sum2 = 0;
