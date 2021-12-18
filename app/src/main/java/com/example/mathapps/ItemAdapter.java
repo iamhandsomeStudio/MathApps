@@ -27,6 +27,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
     private Context mContext;
     private List<String[]>stages;
     private List<String> stageData ;
+    int level;
 
     //private LinkedList<HashMap<String, String>> data;
 
@@ -36,9 +37,10 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
         //doData();
     }
 
-    public ItemAdapter(List<String[]> strings)
+    public ItemAdapter(List<String[]> strings, int level)
     {
         this.stages = strings;
+        this.level = level;
         //doData();
     }
 
@@ -91,6 +93,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
         //System.out.println(stages.get(position));
         holder.score.setText(stages.get(position)[1]);
         holder.totalTime.setText(stages.get(position)[2]);
+        holder.different.setText(stages.get(position)[3]);
         System.out.println("length " +stages.size());
         //System.out.println(stages.get(1)[0]);
         //System.out.println(stages.get(2).toString());
@@ -104,7 +107,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
 
     class ViewHolder extends RecyclerView.ViewHolder
     {
-        private TextView name, stage, score, totalTime;
+        private TextView name, stage, score, totalTime,different;
         private  View itemView;
         public ViewHolder(@NonNull View v) {
             super(v);
@@ -113,6 +116,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
             name = itemView.findViewById(R.id.item_name);
             score = itemView.findViewById(R.id.item_score);
             totalTime = itemView.findViewById(R.id.item_totalTime);
+            different = itemView.findViewById(R.id.different_text);
         }
     }
 

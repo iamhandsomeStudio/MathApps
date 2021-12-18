@@ -34,6 +34,8 @@ public class RankActivity extends AppCompatActivity {
     List<String[]> csvList = new ArrayList<String[]>();
     private String fileName = "MathApp.csv";
     private File completeExternalPath = null;
+    Bundle extra;  //頁面傳值
+    int different = 0;
     Intent rankInt;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,14 +50,16 @@ public class RankActivity extends AppCompatActivity {
         mLayoutManager = new LinearLayoutManager(this);
         rankReccycleView.setLayoutManager(mLayoutManager);
 
-
+        extra = getIntent().getExtras();
+        different = stringToInt(extra.getString("dif"));
+        System.out.println(different);
         //specify an adapter (see also next example)
         /*itemAdapter = new ItemAdapter(this);
         rankReccycleView.setAdapter(itemAdapter);*/
 
         //csvList = new LinkedList<>();
         readCsv();
-        itemAdapter = new ItemAdapter(csvList);
+        itemAdapter = new ItemAdapter(csvList, different);
         rankReccycleView.setAdapter(itemAdapter);
     }
 
@@ -106,5 +110,28 @@ public class RankActivity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
         finish();
+    }
+
+    public int stringToInt(String str)
+    {
+        int number = 0;
+        switch (str){
+            case "一":
+                number = 1;
+                break;
+            case "二":
+                number = 2;
+                break;
+            case "三":
+                number = 3;
+                break;
+            case "四":
+                number = 4;
+                break;
+            case "五":
+                number = 5;
+                break;
+        }
+        return number;
     }
 }
