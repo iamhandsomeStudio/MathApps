@@ -297,6 +297,7 @@ public class MainActivity extends AppCompatActivity {
             btn_SW();
             cdt.start();
         }else{
+
             if(page < 10){
                 ansRandom();
                 btnText();
