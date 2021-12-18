@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
     TextView que1,que2,que3,que4,que5,que6,time, stage, scoreText;
     int[] x = new int[12];
     int[] y = new int[6];
-    int sum2,sub,count = 0,score = 0,page = 0,min = 0,sec = 0;
+    int sum2,sub,count = 0,score = 0,page = 0,min = 0,sec = 0,dif = 0;
     Bundle extra;  //頁面傳值
     CountDownTimer cdt;
     ActionBar mainActionBar;
@@ -318,7 +318,7 @@ public class MainActivity extends AppCompatActivity {
                 //file = new File(getExternalFilesDir(null),"MathApp.csv");
                 try{
                     BufferedWriter writer = new BufferedWriter(new FileWriter(file,true));
-                    writer.write(extra.getString("name") + "," + scoreText.getText() + "," + time.getText());
+                    writer.write(extra.getString("name") + "," + scoreText.getText() + "," + time.getText() + "," + dif);
                     writer.newLine();
                     writer.flush();
                     writer.close();
@@ -460,6 +460,7 @@ public class MainActivity extends AppCompatActivity {
     public void btnText(){
         if(extra.getString("ex").equals("加法")){
             if(extra.getString("dif").equals("一")){
+                dif = 1;
                 btn.setText(valueOf((int)(Math.random()*10+1)));
                 btn2.setText(valueOf((int)(Math.random()*10+1)));
                 btn3.setText(valueOf((int)(Math.random()*10+1)));
@@ -474,6 +475,7 @@ public class MainActivity extends AppCompatActivity {
                 btn12.setText(valueOf((int)(Math.random()*10+1)));
             }
             if(extra.getString("dif").equals("二")){
+                dif = 2;
                 btn.setText(valueOf((int)(Math.random()*40+1)));
                 btn2.setText(valueOf((int)(Math.random()*40+1)));
                 btn3.setText(valueOf((int)(Math.random()*40+1)));
@@ -488,6 +490,7 @@ public class MainActivity extends AppCompatActivity {
                 btn12.setText(valueOf((int)(Math.random()*40+1)));
             }
             if(extra.getString("dif").equals("三")){
+                dif = 3;
                 btn.setText(valueOf((int)(Math.random()*60+1)));
                 btn2.setText(valueOf((int)(Math.random()*60+1)));
                 btn3.setText(valueOf((int)(Math.random()*60+1)));
@@ -502,6 +505,7 @@ public class MainActivity extends AppCompatActivity {
                 btn12.setText(valueOf((int)(Math.random()*60+1)));
             }
             if(extra.getString("dif").equals("四")){
+                dif = 4;
                 btn.setText(valueOf((int)(Math.random()*80+1)));
                 btn2.setText(valueOf((int)(Math.random()*80+1)));
                 btn3.setText(valueOf((int)(Math.random()*80+1)));
@@ -516,6 +520,7 @@ public class MainActivity extends AppCompatActivity {
                 btn12.setText(valueOf((int)(Math.random()*80+1)));
             }
             if(extra.getString("dif").equals("五")){
+                dif = 5;
                 btn.setText(valueOf((int)(Math.random()*100+1)));
                 btn2.setText(valueOf((int)(Math.random()*100+1)));
                 btn3.setText(valueOf((int)(Math.random()*100+1)));
@@ -531,6 +536,7 @@ public class MainActivity extends AppCompatActivity {
             }
         }else if(extra.getString("ex").equals("減法")){
             if(extra.getString("dif").equals("一")){
+                dif = 1;
                 btn.setText(valueOf((int)(Math.random()*20+1)));
                 btn2.setText(valueOf((int)(Math.random()*20+1)));
                 btn3.setText(valueOf((int)(Math.random()*20+1)));
@@ -545,6 +551,7 @@ public class MainActivity extends AppCompatActivity {
                 btn12.setText(valueOf((int)(Math.random()*20+1)));
             }
             if(extra.getString("dif").equals("二")){
+                dif = 2;
                 btn.setText(valueOf((int)(Math.random()*80+1)));
                 btn2.setText(valueOf((int)(Math.random()*80+1)));
                 btn3.setText(valueOf((int)(Math.random()*80+1)));
@@ -559,6 +566,7 @@ public class MainActivity extends AppCompatActivity {
                 btn12.setText(valueOf((int)(Math.random()*80+1)));
             }
             if(extra.getString("dif").equals("三")){
+                dif = 3;
                 btn.setText(valueOf((int)(Math.random()*120+1)));
                 btn2.setText(valueOf((int)(Math.random()*120+1)));
                 btn3.setText(valueOf((int)(Math.random()*120+1)));
@@ -573,6 +581,7 @@ public class MainActivity extends AppCompatActivity {
                 btn12.setText(valueOf((int)(Math.random()*120+1)));
             }
             if(extra.getString("dif").equals("四")){
+                dif = 4;
                 btn.setText(valueOf((int)(Math.random()*160+1)));
                 btn2.setText(valueOf((int)(Math.random()*160+1)));
                 btn3.setText(valueOf((int)(Math.random()*160+1)));
@@ -587,6 +596,7 @@ public class MainActivity extends AppCompatActivity {
                 btn12.setText(valueOf((int)(Math.random()*160+1)));
             }
             if(extra.getString("dif").equals("五")){
+                dif = 5;
                 btn.setText(valueOf((int)(Math.random()*200+1)));
                 btn2.setText(valueOf((int)(Math.random()*200+1)));
                 btn3.setText(valueOf((int)(Math.random()*200+1)));

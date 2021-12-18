@@ -100,7 +100,7 @@ public class RankActivity extends AppCompatActivity {
     }
 
     public void end_onClick(View v){
-        finish();
+        finishAffinity();
     }
     @Override
     protected void onDestroy() {
