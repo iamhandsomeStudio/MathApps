@@ -1,10 +1,13 @@
 package com.example.mathapps;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.DialogTitle;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.Dialog;
 import android.os.Bundle;
+import android.view.Window;
 import android.widget.FrameLayout;
 
 
