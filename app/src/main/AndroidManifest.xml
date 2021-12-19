@@ -23,7 +23,7 @@
             android:name=".RankActivity"
             android:exported="false"
             android:screenOrientation="landscape"
-            android:theme="@style/Theme.AppCompat.Dialog.MinWidth"/>
+            android:theme="@style/Theme.AppCompat.NoActionBar"/>
         <activity
             android:name=".ExplanationActivity"
             android:exported="false"
@@ -33,11 +33,11 @@
             android:name=".SelectActivity"
             android:exported="false"
             android:screenOrientation="landscape"
-            android:theme="@style/Theme.NoActionBar"></activity>
+            android:theme="@style/Theme.NoActionBar" />
         <activity
             android:name=".MainActivity"
-            android:exported="true"
-            android:screenOrientation="landscape"></activity>
+            android:exported="false"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".WelcomeActivity"
             android:exported="true"

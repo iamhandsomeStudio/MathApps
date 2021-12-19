@@ -3,6 +3,7 @@ package com.example.mathapps;
 import static java.lang.String.*;
 
 import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
@@ -328,6 +329,7 @@ public class MainActivity extends AppCompatActivity {
                 rankInt = new Intent(MainActivity.this,RankActivity.class);
                 rankInt.putExtra("dif",dif);
                 startActivity(rankInt);
+
                 next_stage.setEnabled(false);
             }
 
@@ -653,6 +655,14 @@ public class MainActivity extends AppCompatActivity {
         if(count > 2){
             count = 0;
         }
+    }
+    public void DialogSet(){
+        final AlertDialog.Builder dialog = new AlertDialog.Builder(MainActivity.this);
+        View view = getLayoutInflater().inflate(R.layout.activity_rank,null);
+        dialog.setView(view);
+
+        final  AlertDialog dialog1 = dialog.create();
+        dialog1.show();
     }
 
 }
