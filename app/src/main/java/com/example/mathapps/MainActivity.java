@@ -464,7 +464,7 @@ public class MainActivity extends AppCompatActivity {
             if(extra.getString("dif").equals("一")){
                 for(int i = 0; i < y.length; i++){
                     x[i] = y[i] - (int) (Math.random() * 10 + 1);
-                    if (x[i] < 0) {
+                    if (x[i] < 0 || x[i] == 0) {
                        i--;
                     }else{
                         z[i] = y[i] - x[i];
@@ -487,7 +487,7 @@ public class MainActivity extends AppCompatActivity {
             if(extra.getString("dif").equals("二")){
                 for(int i = 0; i < y.length; i++){
                     x[i] = y[i] - (int) (Math.random() * 40 + 1);
-                    if (x[i] < 0) {
+                    if (x[i] < 0 || x[i] == 0) {
                         i--;
                     }else{
                         z[i] = y[i] - x[i];
@@ -510,7 +510,7 @@ public class MainActivity extends AppCompatActivity {
             if(extra.getString("dif").equals("三")){
                 for(int i = 0; i < y.length; i++){
                     x[i] = y[i] - (int) (Math.random() * 60 + 1);
-                    if (x[i] < 0) {
+                    if (x[i] < 0 || x[i] == 0) {
                         i--;
                     }else{
                         z[i] = y[i] - x[i];
@@ -533,7 +533,7 @@ public class MainActivity extends AppCompatActivity {
             if(extra.getString("dif").equals("四")){
                 for(int i = 0; i < y.length; i++){
                     x[i] = y[i] - (int) (Math.random() * 80 + 1);
-                    if (x[i] < 0) {
+                    if (x[i] < 0 || x[i] == 0) {
                         i--;
                     }else{
                         z[i] = y[i] - x[i];
@@ -556,7 +556,7 @@ public class MainActivity extends AppCompatActivity {
             if(extra.getString("dif").equals("五")){
                 for(int i = 0; i < y.length; i++){
                     x[i] = y[i] - (int) (Math.random() * 100 + 1);
-                    if (x[i] < 0) {
+                    if (x[i] < 0 || x[i] == 0) {
                         i--;
                     }else{
                         z[i] = y[i] - x[i];
@@ -580,11 +580,11 @@ public class MainActivity extends AppCompatActivity {
             if(extra.getString("dif").equals("一")){
                 for(int i = 0; i < y.length; i++){
                     x[i] = (int) (Math.random() * 20 + 1) - y[i];
-                    if (x[i] < 0) {
+                    if (x[i] < 0 || x[i] == 0) {
                         i--;
                     }else{
                         z[i] = x[i] + y[i];
-                        System.out.println(y[i] + "," + x[i] + "," + z[i]);
+                        //System.out.println(y[i] + "," + x[i] + "," + z[i]);
                     }
                 }
                 dif = 1;
@@ -604,7 +604,7 @@ public class MainActivity extends AppCompatActivity {
             if(extra.getString("dif").equals("二")){
                 for(int i = 0; i < y.length; i++){
                     x[i] = (int) (Math.random() * 80 + 1) - y[i];
-                    if (x[i] < 0) {
+                    if (x[i] < 0 || x[i] == 0) {
                         i--;
                     }else{
                         z[i] = x[i] + y[i];
@@ -627,7 +627,7 @@ public class MainActivity extends AppCompatActivity {
             if(extra.getString("dif").equals("三")){
                 for(int i = 0; i < y.length; i++){
                     x[i] = (int) (Math.random() * 120 + 1) - y[i];
-                    if (x[i] < 0) {
+                    if (x[i] < 0 || x[i] == 0) {
                         i--;
                     }else{
                         z[i] = x[i] + y[i];
@@ -650,7 +650,7 @@ public class MainActivity extends AppCompatActivity {
             if(extra.getString("dif").equals("四")){
                 for(int i = 0; i < y.length; i++){
                     x[i] = (int) (Math.random() * 160 + 1) - y[i];
-                    if (x[i] < 0) {
+                    if (x[i] < 0 || x[i] == 0) {
                         i--;
                     }else{
                         z[i] = x[i] + y[i];
@@ -673,7 +673,7 @@ public class MainActivity extends AppCompatActivity {
             if(extra.getString("dif").equals("五")){
                 for(int i = 0; i < y.length; i++){
                     x[i] = (int) (Math.random() * 200 + 1) - y[i];
-                    if (x[i] < 0) {
+                    if (x[i] < 0 || x[i] == 0) {
                         i--;
                     }else{
                         z[i] = x[i] + y[i];
