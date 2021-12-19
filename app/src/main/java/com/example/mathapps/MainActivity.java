@@ -35,8 +35,9 @@ public class MainActivity extends AppCompatActivity {
 
     Button btn,btn2,btn3,btn4,btn5,btn6,btn7,btn8,btn9,btn10,btn11,btn12,next_stage;
     TextView que1,que2,que3,que4,que5,que6,time, stage, scoreText;
-    int[] x = new int[12];
+    int[] x = new int[6];
     int[] y = new int[6];
+    int[] z = new int[6];
     int sum2,sub,count = 0,score = 0,page = 0,min = 0,sec = 0,dif = 0;
     Bundle extra;  //頁面傳值
     CountDownTimer cdt;
@@ -76,8 +77,8 @@ public class MainActivity extends AppCompatActivity {
 
         next_stage = (Button)findViewById(R.id.next_stage);
 
-        btnText();
         ansRandom();
+        btnText();
         btn_SW();
 
         que1.setText(valueOf(y[0]));
@@ -206,7 +207,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void click(View v){
         countGet();
-        x[0] = Integer.parseInt(valueOf(btn.getText()));
+        //x[0] = Integer.parseInt(valueOf(btn.getText()));
         btn.setBackgroundTintList(ColorStateList.valueOf(Color.BLUE));
         btn.setEnabled(false);
         sum(x[0]);
@@ -214,80 +215,80 @@ public class MainActivity extends AppCompatActivity {
     }
     public void click_2(View v){
         countGet();
-        x[1] = Integer.parseInt(valueOf(btn2.getText()));
+        //x[1] = Integer.parseInt(valueOf(btn2.getText()));
         btn2.setBackgroundTintList(ColorStateList.valueOf(Color.BLUE));
         btn2.setEnabled(false);
         sum(x[1]);
     }
     public void click_3(View v){
         countGet();
-        x[2] = Integer.parseInt(valueOf(btn3.getText()));
+        //x[2] = Integer.parseInt(valueOf(btn3.getText()));
         btn3.setBackgroundTintList(ColorStateList.valueOf(Color.BLUE));
         btn3.setEnabled(false);
         sum(x[2]);
     }
     public void click_4(View v){
         countGet();
-        x[3] = Integer.parseInt(valueOf(btn4.getText()));
+        //x[3] = Integer.parseInt(valueOf(btn4.getText()));
         btn4.setBackgroundTintList(ColorStateList.valueOf(Color.BLUE));
         btn4.setEnabled(false);
         sum(x[3]);
     }
     public void click_5(View v){
         countGet();
-        x[4] = Integer.parseInt(valueOf(btn5.getText()));
+        //x[4] = Integer.parseInt(valueOf(btn5.getText()));
         btn5.setBackgroundTintList(ColorStateList.valueOf(Color.BLUE));
         btn5.setEnabled(false);
         sum(x[4]);
     }
     public void click_6(View v){
         countGet();
-        x[5] = Integer.parseInt(valueOf(btn6.getText()));
+        //x[5] = Integer.parseInt(valueOf(btn6.getText()));
         btn6.setBackgroundTintList(ColorStateList.valueOf(Color.BLUE));
         btn6.setEnabled(false);
         sum(x[5]);
     }
     public void click_7(View v){
         countGet();
-        x[6] = Integer.parseInt(valueOf(btn7.getText()));
+        //x[6] = Integer.parseInt(valueOf(btn7.getText()));
         btn7.setBackgroundTintList(ColorStateList.valueOf(Color.BLUE));
         btn7.setEnabled(false);
-        sum(x[6]);
+        sum(z[0]);
     }
     public void click_8(View v){
         countGet();
-        x[7] = Integer.parseInt(valueOf(btn8.getText()));
+        //x[7] = Integer.parseInt(valueOf(btn8.getText()));
         btn8.setBackgroundTintList(ColorStateList.valueOf(Color.BLUE));
         btn8.setEnabled(false);
-        sum(x[7]);
+        sum(z[1]);
     }
     public void click_9(View v){
         countGet();
-        x[8] = Integer.parseInt(valueOf(btn9.getText()));
+        //x[8] = Integer.parseInt(valueOf(btn9.getText()));
         btn9.setBackgroundTintList(ColorStateList.valueOf(Color.BLUE));
         btn9.setEnabled(false);
-        sum(x[8]);
+        sum(z[2]);
     }
     public void click_10(View v){
         countGet();
-        x[9] = Integer.parseInt(valueOf(btn10.getText()));
+        //x[9] = Integer.parseInt(valueOf(btn10.getText()));
         btn10.setBackgroundTintList(ColorStateList.valueOf(Color.BLUE));
         btn10.setEnabled(false);
-        sum(x[9]);
+        sum(z[3]);
     }
     public void click_11(View v){
         countGet();
-        x[10] = Integer.parseInt(valueOf(btn11.getText()));
+        //x[10] = Integer.parseInt(valueOf(btn11.getText()));
         btn11.setBackgroundTintList(ColorStateList.valueOf(Color.BLUE));
         btn11.setEnabled(false);
-        sum(x[10]);
+        sum(z[4]);
     }
     public void click_12(View v){
         countGet();
-        x[11] = Integer.parseInt(valueOf(btn12.getText()));
+        //x[11] = Integer.parseInt(valueOf(btn12.getText()));
         btn12.setBackgroundTintList(ColorStateList.valueOf(Color.BLUE));
         btn12.setEnabled(false);
-        sum(x[11]);
+        sum(z[5]);
     }
     public void next(View v){    //下一關
         if(page == 0){
@@ -298,7 +299,6 @@ public class MainActivity extends AppCompatActivity {
             btn_SW();
             cdt.start();
         }else{
-
             if(page < 10){
                 ansRandom();
                 btnText();
@@ -316,7 +316,6 @@ public class MainActivity extends AppCompatActivity {
             }else{
                 page = 0;
                 cdt.cancel();
-                //file = new File(getExternalFilesDir(null),"MathApp.csv");
                 try{
                     BufferedWriter writer = new BufferedWriter(new FileWriter(file,true));
                     writer.write(extra.getString("name") + "," + scoreText.getText() + "," + time.getText() + "," + dif + ",");
@@ -463,155 +462,236 @@ public class MainActivity extends AppCompatActivity {
     public void btnText(){
         if(extra.getString("ex").equals("加法")){
             if(extra.getString("dif").equals("一")){
+                for(int i = 0; i < y.length; i++){
+                    x[i] = y[i] - (int) (Math.random() * 10 + 1);
+                    if (x[i] < 0) {
+                       i--;
+                    }else{
+                        z[i] = y[i] - x[i];
+                    }
+                }
                 dif = 1;
-                btn.setText(valueOf((int)(Math.random()*10+1)));
-                btn2.setText(valueOf((int)(Math.random()*10+1)));
-                btn3.setText(valueOf((int)(Math.random()*10+1)));
-                btn4.setText(valueOf((int)(Math.random()*10+1)));
-                btn5.setText(valueOf((int)(Math.random()*10+1)));
-                btn6.setText(valueOf((int)(Math.random()*10+1)));
-                btn7.setText(valueOf((int)(Math.random()*10+1)));
-                btn8.setText(valueOf((int)(Math.random()*10+1)));
-                btn9.setText(valueOf((int)(Math.random()*10+1)));
-                btn10.setText(valueOf((int)(Math.random()*10+1)));
-                btn11.setText(valueOf((int)(Math.random()*10+1)));
-                btn12.setText(valueOf((int)(Math.random()*10+1)));
+                btn.setText(valueOf(x[0]));
+                btn2.setText(valueOf(x[1]));
+                btn3.setText(valueOf(x[2]));
+                btn4.setText(valueOf(x[3]));
+                btn5.setText(valueOf(x[4]));
+                btn6.setText(valueOf(x[5]));
+                btn7.setText(valueOf(z[0]));
+                btn8.setText(valueOf(z[1]));
+                btn9.setText(valueOf(z[2]));
+                btn10.setText(valueOf(z[3]));
+                btn11.setText(valueOf(z[4]));
+                btn12.setText(valueOf(z[5]));
             }
             if(extra.getString("dif").equals("二")){
+                for(int i = 0; i < y.length; i++){
+                    x[i] = y[i] - (int) (Math.random() * 40 + 1);
+                    if (x[i] < 0) {
+                        i--;
+                    }else{
+                        z[i] = y[i] - x[i];
+                    }
+                }
                 dif = 2;
-                btn.setText(valueOf((int)(Math.random()*40+1)));
-                btn2.setText(valueOf((int)(Math.random()*40+1)));
-                btn3.setText(valueOf((int)(Math.random()*40+1)));
-                btn4.setText(valueOf((int)(Math.random()*40+1)));
-                btn5.setText(valueOf((int)(Math.random()*40+1)));
-                btn6.setText(valueOf((int)(Math.random()*40+1)));
-                btn7.setText(valueOf((int)(Math.random()*40+1)));
-                btn8.setText(valueOf((int)(Math.random()*40+1)));
-                btn9.setText(valueOf((int)(Math.random()*40+1)));
-                btn10.setText(valueOf((int)(Math.random()*40+1)));
-                btn11.setText(valueOf((int)(Math.random()*40+1)));
-                btn12.setText(valueOf((int)(Math.random()*40+1)));
+                btn.setText(valueOf(x[0]));
+                btn2.setText(valueOf(x[1]));
+                btn3.setText(valueOf(x[2]));
+                btn4.setText(valueOf(x[3]));
+                btn5.setText(valueOf(x[4]));
+                btn6.setText(valueOf(x[5]));
+                btn7.setText(valueOf(z[0]));
+                btn8.setText(valueOf(z[1]));
+                btn9.setText(valueOf(z[2]));
+                btn10.setText(valueOf(z[3]));
+                btn11.setText(valueOf(z[4]));
+                btn12.setText(valueOf(z[5]));
             }
             if(extra.getString("dif").equals("三")){
+                for(int i = 0; i < y.length; i++){
+                    x[i] = y[i] - (int) (Math.random() * 60 + 1);
+                    if (x[i] < 0) {
+                        i--;
+                    }else{
+                        z[i] = y[i] - x[i];
+                    }
+                }
                 dif = 3;
-                btn.setText(valueOf((int)(Math.random()*60+1)));
-                btn2.setText(valueOf((int)(Math.random()*60+1)));
-                btn3.setText(valueOf((int)(Math.random()*60+1)));
-                btn4.setText(valueOf((int)(Math.random()*60+1)));
-                btn5.setText(valueOf((int)(Math.random()*60+1)));
-                btn6.setText(valueOf((int)(Math.random()*60+1)));
-                btn7.setText(valueOf((int)(Math.random()*60+1)));
-                btn8.setText(valueOf((int)(Math.random()*60+1)));
-                btn9.setText(valueOf((int)(Math.random()*60+1)));
-                btn10.setText(valueOf((int)(Math.random()*60+1)));
-                btn11.setText(valueOf((int)(Math.random()*60+1)));
-                btn12.setText(valueOf((int)(Math.random()*60+1)));
+                btn.setText(valueOf(x[0]));
+                btn2.setText(valueOf(x[1]));
+                btn3.setText(valueOf(x[2]));
+                btn4.setText(valueOf(x[3]));
+                btn5.setText(valueOf(x[4]));
+                btn6.setText(valueOf(x[5]));
+                btn7.setText(valueOf(z[0]));
+                btn8.setText(valueOf(z[1]));
+                btn9.setText(valueOf(z[2]));
+                btn10.setText(valueOf(z[3]));
+                btn11.setText(valueOf(z[4]));
+                btn12.setText(valueOf(z[5]));
             }
             if(extra.getString("dif").equals("四")){
+                for(int i = 0; i < y.length; i++){
+                    x[i] = y[i] - (int) (Math.random() * 80 + 1);
+                    if (x[i] < 0) {
+                        i--;
+                    }else{
+                        z[i] = y[i] - x[i];
+                    }
+                }
                 dif = 4;
-                btn.setText(valueOf((int)(Math.random()*80+1)));
-                btn2.setText(valueOf((int)(Math.random()*80+1)));
-                btn3.setText(valueOf((int)(Math.random()*80+1)));
-                btn4.setText(valueOf((int)(Math.random()*80+1)));
-                btn5.setText(valueOf((int)(Math.random()*80+1)));
-                btn6.setText(valueOf((int)(Math.random()*80+1)));
-                btn7.setText(valueOf((int)(Math.random()*80+1)));
-                btn8.setText(valueOf((int)(Math.random()*80+1)));
-                btn9.setText(valueOf((int)(Math.random()*80+1)));
-                btn10.setText(valueOf((int)(Math.random()*80+1)));
-                btn11.setText(valueOf((int)(Math.random()*80+1)));
-                btn12.setText(valueOf((int)(Math.random()*80+1)));
+                btn.setText(valueOf(x[0]));
+                btn2.setText(valueOf(x[1]));
+                btn3.setText(valueOf(x[2]));
+                btn4.setText(valueOf(x[3]));
+                btn5.setText(valueOf(x[4]));
+                btn6.setText(valueOf(x[5]));
+                btn7.setText(valueOf(z[0]));
+                btn8.setText(valueOf(z[1]));
+                btn9.setText(valueOf(z[2]));
+                btn10.setText(valueOf(z[3]));
+                btn11.setText(valueOf(z[4]));
+                btn12.setText(valueOf(z[5]));
             }
             if(extra.getString("dif").equals("五")){
+                for(int i = 0; i < y.length; i++){
+                    x[i] = y[i] - (int) (Math.random() * 100 + 1);
+                    if (x[i] < 0) {
+                        i--;
+                    }else{
+                        z[i] = y[i] - x[i];
+                    }
+                }
                 dif = 5;
-                btn.setText(valueOf((int)(Math.random()*100+1)));
-                btn2.setText(valueOf((int)(Math.random()*100+1)));
-                btn3.setText(valueOf((int)(Math.random()*100+1)));
-                btn4.setText(valueOf((int)(Math.random()*100+1)));
-                btn5.setText(valueOf((int)(Math.random()*100+1)));
-                btn6.setText(valueOf((int)(Math.random()*100+1)));
-                btn7.setText(valueOf((int)(Math.random()*100+1)));
-                btn8.setText(valueOf((int)(Math.random()*100+1)));
-                btn9.setText(valueOf((int)(Math.random()*100+1)));
-                btn10.setText(valueOf((int)(Math.random()*100+1)));
-                btn11.setText(valueOf((int)(Math.random()*100+1)));
-                btn12.setText(valueOf((int)(Math.random()*100+1)));
+                btn.setText(valueOf(x[0]));
+                btn2.setText(valueOf(x[1]));
+                btn3.setText(valueOf(x[2]));
+                btn4.setText(valueOf(x[3]));
+                btn5.setText(valueOf(x[4]));
+                btn6.setText(valueOf(x[5]));
+                btn7.setText(valueOf(z[0]));
+                btn8.setText(valueOf(z[1]));
+                btn9.setText(valueOf(z[2]));
+                btn10.setText(valueOf(z[3]));
+                btn11.setText(valueOf(z[4]));
+                btn12.setText(valueOf(z[5]));
             }
         }else if(extra.getString("ex").equals("減法")){
             if(extra.getString("dif").equals("一")){
+                for(int i = 0; i < y.length; i++){
+                    x[i] = (int) (Math.random() * 20 + 1) - y[i];
+                    if (x[i] < 0) {
+                        i--;
+                    }else{
+                        z[i] = x[i] + y[i];
+                        System.out.println(y[i] + "," + x[i] + "," + z[i]);
+                    }
+                }
                 dif = 1;
-                btn.setText(valueOf((int)(Math.random()*20+1)));
-                btn2.setText(valueOf((int)(Math.random()*20+1)));
-                btn3.setText(valueOf((int)(Math.random()*20+1)));
-                btn4.setText(valueOf((int)(Math.random()*20+1)));
-                btn5.setText(valueOf((int)(Math.random()*20+1)));
-                btn6.setText(valueOf((int)(Math.random()*20+1)));
-                btn7.setText(valueOf((int)(Math.random()*20+1)));
-                btn8.setText(valueOf((int)(Math.random()*20+1)));
-                btn9.setText(valueOf((int)(Math.random()*20+1)));
-                btn10.setText(valueOf((int)(Math.random()*20+1)));
-                btn11.setText(valueOf((int)(Math.random()*20+1)));
-                btn12.setText(valueOf((int)(Math.random()*20+1)));
+                btn.setText(valueOf(x[0]));
+                btn2.setText(valueOf(x[1]));
+                btn3.setText(valueOf(x[2]));
+                btn4.setText(valueOf(x[3]));
+                btn5.setText(valueOf(x[4]));
+                btn6.setText(valueOf(x[5]));
+                btn7.setText(valueOf(z[0]));
+                btn8.setText(valueOf(z[1]));
+                btn9.setText(valueOf(z[2]));
+                btn10.setText(valueOf(z[3]));
+                btn11.setText(valueOf(z[4]));
+                btn12.setText(valueOf(z[5]));
             }
             if(extra.getString("dif").equals("二")){
+                for(int i = 0; i < y.length; i++){
+                    x[i] = (int) (Math.random() * 80 + 1) - y[i];
+                    if (x[i] < 0) {
+                        i--;
+                    }else{
+                        z[i] = x[i] + y[i];
+                    }
+                }
                 dif = 2;
-                btn.setText(valueOf((int)(Math.random()*80+1)));
-                btn2.setText(valueOf((int)(Math.random()*80+1)));
-                btn3.setText(valueOf((int)(Math.random()*80+1)));
-                btn4.setText(valueOf((int)(Math.random()*80+1)));
-                btn5.setText(valueOf((int)(Math.random()*80+1)));
-                btn6.setText(valueOf((int)(Math.random()*80+1)));
-                btn7.setText(valueOf((int)(Math.random()*80+1)));
-                btn8.setText(valueOf((int)(Math.random()*80+1)));
-                btn9.setText(valueOf((int)(Math.random()*80+1)));
-                btn10.setText(valueOf((int)(Math.random()*80+1)));
-                btn11.setText(valueOf((int)(Math.random()*80+1)));
-                btn12.setText(valueOf((int)(Math.random()*80+1)));
+                btn.setText(valueOf(x[0]));
+                btn2.setText(valueOf(x[1]));
+                btn3.setText(valueOf(x[2]));
+                btn4.setText(valueOf(x[3]));
+                btn5.setText(valueOf(x[4]));
+                btn6.setText(valueOf(x[5]));
+                btn7.setText(valueOf(z[0]));
+                btn8.setText(valueOf(z[1]));
+                btn9.setText(valueOf(z[2]));
+                btn10.setText(valueOf(z[3]));
+                btn11.setText(valueOf(z[4]));
+                btn12.setText(valueOf(z[5]));
             }
             if(extra.getString("dif").equals("三")){
+                for(int i = 0; i < y.length; i++){
+                    x[i] = (int) (Math.random() * 120 + 1) - y[i];
+                    if (x[i] < 0) {
+                        i--;
+                    }else{
+                        z[i] = x[i] + y[i];
+                    }
+                }
                 dif = 3;
-                btn.setText(valueOf((int)(Math.random()*120+1)));
-                btn2.setText(valueOf((int)(Math.random()*120+1)));
-                btn3.setText(valueOf((int)(Math.random()*120+1)));
-                btn4.setText(valueOf((int)(Math.random()*120+1)));
-                btn5.setText(valueOf((int)(Math.random()*120+1)));
-                btn6.setText(valueOf((int)(Math.random()*120+1)));
-                btn7.setText(valueOf((int)(Math.random()*120+1)));
-                btn8.setText(valueOf((int)(Math.random()*120+1)));
-                btn9.setText(valueOf((int)(Math.random()*120+1)));
-                btn10.setText(valueOf((int)(Math.random()*120+1)));
-                btn11.setText(valueOf((int)(Math.random()*120+1)));
-                btn12.setText(valueOf((int)(Math.random()*120+1)));
+                btn.setText(valueOf(x[0]));
+                btn2.setText(valueOf(x[1]));
+                btn3.setText(valueOf(x[2]));
+                btn4.setText(valueOf(x[3]));
+                btn5.setText(valueOf(x[4]));
+                btn6.setText(valueOf(x[5]));
+                btn7.setText(valueOf(z[0]));
+                btn8.setText(valueOf(z[1]));
+                btn9.setText(valueOf(z[2]));
+                btn10.setText(valueOf(z[3]));
+                btn11.setText(valueOf(z[4]));
+                btn12.setText(valueOf(z[5]));
             }
             if(extra.getString("dif").equals("四")){
+                for(int i = 0; i < y.length; i++){
+                    x[i] = (int) (Math.random() * 160 + 1) - y[i];
+                    if (x[i] < 0) {
+                        i--;
+                    }else{
+                        z[i] = x[i] + y[i];
+                    }
+                }
                 dif = 4;
-                btn.setText(valueOf((int)(Math.random()*160+1)));
-                btn2.setText(valueOf((int)(Math.random()*160+1)));
-                btn3.setText(valueOf((int)(Math.random()*160+1)));
-                btn4.setText(valueOf((int)(Math.random()*160+1)));
-                btn5.setText(valueOf((int)(Math.random()*160+1)));
-                btn6.setText(valueOf((int)(Math.random()*160+1)));
-                btn7.setText(valueOf((int)(Math.random()*160+1)));
-                btn8.setText(valueOf((int)(Math.random()*160+1)));
-                btn9.setText(valueOf((int)(Math.random()*160+1)));
-                btn10.setText(valueOf((int)(Math.random()*160+1)));
-                btn11.setText(valueOf((int)(Math.random()*160+1)));
-                btn12.setText(valueOf((int)(Math.random()*160+1)));
+                btn.setText(valueOf(x[0]));
+                btn2.setText(valueOf(x[1]));
+                btn3.setText(valueOf(x[2]));
+                btn4.setText(valueOf(x[3]));
+                btn5.setText(valueOf(x[4]));
+                btn6.setText(valueOf(x[5]));
+                btn7.setText(valueOf(z[0]));
+                btn8.setText(valueOf(z[1]));
+                btn9.setText(valueOf(z[2]));
+                btn10.setText(valueOf(z[3]));
+                btn11.setText(valueOf(z[4]));
+                btn12.setText(valueOf(z[5]));
             }
             if(extra.getString("dif").equals("五")){
+                for(int i = 0; i < y.length; i++){
+                    x[i] = (int) (Math.random() * 200 + 1) - y[i];
+                    if (x[i] < 0) {
+                        i--;
+                    }else{
+                        z[i] = x[i] + y[i];
+                    }
+                }
                 dif = 5;
-                btn.setText(valueOf((int)(Math.random()*200+1)));
-                btn2.setText(valueOf((int)(Math.random()*200+1)));
-                btn3.setText(valueOf((int)(Math.random()*200+1)));
-                btn4.setText(valueOf((int)(Math.random()*200+1)));
-                btn5.setText(valueOf((int)(Math.random()*200+1)));
-                btn6.setText(valueOf((int)(Math.random()*200+1)));
-                btn7.setText(valueOf((int)(Math.random()*200+1)));
-                btn8.setText(valueOf((int)(Math.random()*200+1)));
-                btn9.setText(valueOf((int)(Math.random()*200+1)));
-                btn10.setText(valueOf((int)(Math.random()*200+1)));
-                btn11.setText(valueOf((int)(Math.random()*200+1)));
-                btn12.setText(valueOf((int)(Math.random()*200+1)));
+                btn.setText(valueOf(x[0]));
+                btn2.setText(valueOf(x[1]));
+                btn3.setText(valueOf(x[2]));
+                btn4.setText(valueOf(x[3]));
+                btn5.setText(valueOf(x[4]));
+                btn6.setText(valueOf(x[5]));
+                btn7.setText(valueOf(z[0]));
+                btn8.setText(valueOf(z[1]));
+                btn9.setText(valueOf(z[2]));
+                btn10.setText(valueOf(z[3]));
+                btn11.setText(valueOf(z[4]));
+                btn12.setText(valueOf(z[5]));
             }
         }
 
