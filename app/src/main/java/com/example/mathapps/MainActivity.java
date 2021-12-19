@@ -319,7 +319,7 @@ public class MainActivity extends AppCompatActivity {
                 //file = new File(getExternalFilesDir(null),"MathApp.csv");
                 try{
                     BufferedWriter writer = new BufferedWriter(new FileWriter(file,true));
-                    writer.write(extra.getString("name") + "," + scoreText.getText() + "," + time.getText() + "," + dif);
+                    writer.write(extra.getString("name") + "," + scoreText.getText() + "," + time.getText() + "," + dif + ",");
                     writer.newLine();
                     writer.flush();
                     writer.close();
