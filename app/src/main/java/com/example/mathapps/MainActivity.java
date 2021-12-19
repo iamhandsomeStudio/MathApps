@@ -664,5 +664,4 @@ public class MainActivity extends AppCompatActivity {
         final  AlertDialog dialog1 = dialog.create();
         dialog1.show();
     }
-
 }
