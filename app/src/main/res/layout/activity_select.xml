@@ -18,7 +18,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/name"
-            android:textColor="@color/black"
+            android:textColor="#0D5FB8"
             android:textSize="25sp" />
 
         <EditText
@@ -28,7 +28,7 @@
             android:ems="10"
             android:inputType="textPersonName"
             android:text="Name"
-            android:textColor="@color/black" />
+            android:textColor="#0D5FB8" />
 
     </LinearLayout>
 
@@ -41,7 +41,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/difficult"
-            android:textColor="@color/black"
+            android:textColor="#0D5FB8"
             android:textSize="25sp" />
 
         <Spinner
@@ -61,7 +61,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/expression"
-            android:textColor="@color/black"
+            android:textColor="#0D5FB8"
             android:textSize="25sp" />
 
         <Spinner

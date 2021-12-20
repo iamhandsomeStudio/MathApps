@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/dog"
 
+    android:background="@drawable/dog1"
     android:orientation="horizontal"
     tools:context=".MainActivity">
 
@@ -13,6 +13,8 @@
         android:id="@+id/stage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="第一關\n答案"
+        android:textColor="#FFD740"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintEnd_toEndOf="parent"
@@ -45,14 +47,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/ques_one"
-                android:textSize="25sp" />
+                android:textColor="#5C1E05"
+                android:textSize="24sp" />
 
             <TextView
                 android:id="@+id/quesOne"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="1"
-                android:textSize="25sp"
+                android:textColor="#5C1E05"
+                android:textSize="24sp"
                 tools:ignore="HardcodedText" />
         </LinearLayout>
 
@@ -66,14 +70,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/ques_two"
-                android:textSize="25sp" />
+                android:textColor="#5C1E05"
+                android:textSize="24sp" />
 
             <TextView
                 android:id="@+id/quesTwo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="1"
-                android:textSize="25sp" />
+                android:textColor="#5C1E05"
+                android:textSize="24sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -86,14 +92,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/ques_three"
-                android:textSize="25sp" />
+                android:textColor="#5C1E05"
+                android:textSize="24sp" />
 
             <TextView
                 android:id="@+id/quesThree"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="1"
-                android:textSize="25sp" />
+                android:textColor="#5C1E05"
+                android:textSize="24sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -106,14 +114,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/ques_four"
-                android:textSize="25sp" />
+                android:textColor="#5C1E05"
+                android:textSize="24sp" />
 
             <TextView
                 android:id="@+id/quesFour"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="1"
-                android:textSize="25sp" />
+                android:textColor="#5C1E05"
+                android:textSize="24sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -126,14 +136,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/ques_five"
-                android:textSize="25sp" />
+                android:textColor="#5C1E05"
+                android:textSize="24sp" />
 
             <TextView
                 android:id="@+id/quesFive"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="1"
-                android:textSize="25sp" />
+                android:textColor="#5C1E05"
+                android:textSize="24sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -146,14 +158,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/ques_six"
-                android:textSize="25sp" />
+                android:textColor="#5C1E05"
+                android:textSize="24sp" />
 
             <TextView
                 android:id="@+id/quesSix"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="1"
-                android:textSize="25sp" />
+                android:textColor="#5C1E05"
+                android:textSize="24sp" />
         </LinearLayout>
     </LinearLayout>
 
@@ -182,6 +196,7 @@
                 android:backgroundTint="#F6EB08"
                 android:onClick="click"
                 android:text="1"
+                android:textColor="@color/purple_500"
                 android:textSize="34sp" />
 
             <Button
@@ -192,6 +207,7 @@
                 android:backgroundTint="#F6EB08"
                 android:onClick="click_2"
                 android:text="2"
+                android:textColor="@color/purple_500"
                 android:textSize="34sp" />
 
             <Button
@@ -201,6 +217,7 @@
                 android:backgroundTint="#F6EB08"
                 android:onClick="click_3"
                 android:text="3"
+                android:textColor="@color/purple_500"
                 android:textSize="34sp" />
 
             <Button
@@ -211,6 +228,7 @@
                 android:backgroundTint="#F6EB08"
                 android:onClick="click_4"
                 android:text="4"
+                android:textColor="@color/purple_500"
                 android:textSize="34sp" />
         </LinearLayout>
 
@@ -227,6 +245,7 @@
                 android:backgroundTint="#F6EB08"
                 android:onClick="click_5"
                 android:text="5"
+                android:textColor="@color/purple_500"
                 android:textSize="34sp" />
 
             <Button
@@ -237,6 +256,7 @@
                 android:backgroundTint="#F6EB08"
                 android:onClick="click_6"
                 android:text="6"
+                android:textColor="@color/purple_500"
                 android:textSize="34sp" />
 
             <Button
@@ -246,6 +266,7 @@
                 android:backgroundTint="#F6EB08"
                 android:onClick="click_7"
                 android:text="7"
+                android:textColor="@color/purple_500"
                 android:textSize="34sp" />
 
             <Button
@@ -256,6 +277,7 @@
                 android:backgroundTint="#F6EB08"
                 android:onClick="click_8"
                 android:text="8"
+                android:textColor="@color/purple_500"
                 android:textSize="34sp" />
         </LinearLayout>
 
@@ -272,6 +294,7 @@
                 android:backgroundTint="#F6EB08"
                 android:onClick="click_9"
                 android:text="9"
+                android:textColor="@color/purple_500"
                 android:textSize="34sp" />
 
             <Button
@@ -282,6 +305,7 @@
                 android:backgroundTint="#F6EB08"
                 android:onClick="click_10"
                 android:text="10"
+                android:textColor="@color/purple_500"
                 android:textSize="34sp" />
 
             <Button
@@ -291,6 +315,7 @@
                 android:backgroundTint="#F6EB08"
                 android:onClick="click_11"
                 android:text="11"
+                android:textColor="@color/purple_500"
                 android:textSize="34sp" />
 
             <Button
@@ -301,6 +326,7 @@
                 android:backgroundTint="#F6EB08"
                 android:onClick="click_12"
                 android:text="12"
+                android:textColor="@color/purple_500"
                 android:textSize="34sp" />
         </LinearLayout>
 
@@ -323,8 +349,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_marginTop="30dp"
             android:text="Time"
-            android:textSize="25sp" />
+            android:textColor="#F3E5F5"
+            android:textSize="24sp" />
 
         <TextView
             android:id="@+id/score"
@@ -333,7 +361,8 @@
             android:layout_gravity="center"
             android:layout_marginTop="100dp"
             android:text="0"
-            android:textSize="25sp" />
+            android:textColor="#5C1E05"
+            android:textSize="24sp" />
 
         <Button
             android:id="@+id/next_stage"

@@ -16,6 +16,8 @@ import org.w3c.dom.Text;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.Date;
 import java.util.HashMap;
@@ -64,12 +66,13 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
         //holder.stage.setText(stages.get(0));
         stageData = new ArrayList<>();
         //以成績作為陣列排序的方式
-        stages.sort(new Comparator<String[]>() {
+        /*stages.sort(new Comparator<String[]>() {
             @Override
             public int compare(String[] strings, String[] t1) {
                 return -Integer.compare(Integer.parseInt(strings[1]),Integer.parseInt(t1[1]));
             }
-        });
+        });*/
+        Collections.sort(stages,Collections.reverseOrder());
         //排名計算
         int stage = 0; //排名
         int preScore = -1; //前一次的分數

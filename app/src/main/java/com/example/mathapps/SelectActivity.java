@@ -39,13 +39,13 @@ public class SelectActivity extends AppCompatActivity {
         dif_spinner = (Spinner)findViewById(R.id.difficultSpinner);
         ex_spinner = (Spinner)findViewById(R.id.expressionSpinner);
 
-        dif_adapter = ArrayAdapter.createFromResource(this, R.array.difficult_array,android.R.layout.simple_spinner_item);
-        ex_adapter = ArrayAdapter.createFromResource(this,R.array.expression_array, android.R.layout.simple_spinner_item);
+        dif_adapter = ArrayAdapter.createFromResource(this, R.array.difficult_array,R.layout.spinner_item);
+        ex_adapter = ArrayAdapter.createFromResource(this,R.array.expression_array, R.layout.spinner_item);
 
-        dif_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        dif_adapter.setDropDownViewResource(R.layout.spinner_item);
         dif_spinner.setAdapter(dif_adapter);
 
-        ex_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        ex_adapter.setDropDownViewResource(R.layout.spinner_item);
         ex_spinner.setAdapter(ex_adapter);
 
         nameEditText = (EditText)findViewById(R.id.editTextTextPersonName);
@@ -70,6 +70,8 @@ public class SelectActivity extends AppCompatActivity {
         nameNumber = new Random();
         System.out.println(names[nameNumber.nextInt(62)]);
         nameEditText.setText(names[nameNumber.nextInt(62)]);
+        System.out.println(dif_spinner.getSelectedItem().toString());
+        System.out.println(ex_spinner.getSelectedItem().toString());
     }
 
     public void start(View v){
