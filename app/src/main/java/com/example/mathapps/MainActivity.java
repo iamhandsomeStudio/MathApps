@@ -479,6 +479,7 @@ public class MainActivity extends AppCompatActivity {
             if(extra.getString("dif").equals("一")){
                 for(int i = 0; i < y.length; i++){
                     x[i] = y[i] - (int) (Math.random() * 10 + 1);
+
                     if (x[i] <= 0) {
                         i--;
                     }else{
