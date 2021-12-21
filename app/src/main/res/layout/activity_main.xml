@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
-    android:background="@drawable/dog1"
+    android:background="@drawable/dog2"
     android:orientation="horizontal"
     tools:context=".MainActivity">
 
@@ -13,20 +13,20 @@
         android:id="@+id/stage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="第一關\n答案"
+        android:text="第一關\n  答案"
         android:textColor="#FFD740"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.054"
+        app:layout_constraintHorizontal_bias="0.028"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.603" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <LinearLayout
         android:id="@+id/linearLayout2"
-        android:layout_width="110dp"
-        android:layout_height="251dp"
+        android:layout_width="92dp"
+        android:layout_height="246dp"
         android:layout_gravity="center"
         android:layout_weight="1"
         android:orientation="vertical"

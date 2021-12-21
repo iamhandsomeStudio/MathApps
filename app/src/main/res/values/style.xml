@@ -3,21 +3,21 @@
     <style name="buttonMargin">
         <!--<item name="android:layout_marginTop">10dp</item>
         <item name="android:layout_marginBottom">10dp</item>-->
-        <item name="android:layout_marginLeft">18dp</item>
-        <item name="android:layout_marginRight">18dp</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:layout_marginRight">16dp</item>
     </style>
     <style name="TextViewMargin">
         <!--<item name="android:layout_marginTop">10dp</item>
         <item name="android:layout_marginBottom">10dp</item>-->
-        <item name="android:layout_marginLeft">140dp</item>
+        <item name="android:layout_marginLeft">90dp</item>
         <item name="android:layout_marginRight">90dp</item>
     </style>
     <!--分數的margin-->
     <style name="ScoreTextViewMargin">
         <!--<item name="android:layout_marginTop">10dp</item>
         <item name="android:layout_marginBottom">10dp</item>-->
-        <item name="android:layout_marginLeft">51sp</item>
-        <item name="android:layout_marginRight">124sp</item>
+        <item name="android:layout_marginLeft">50sp</item>
+        <item name="android:layout_marginRight">90sp</item>
     </style>
     <style name="SpinnerColor">
         <!--<item name="android:layout_marginTop">10dp</item>

@@ -10,30 +10,30 @@
     <TextView
         android:id="@+id/item_stage"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_weight="1"
-        android:text="TextView" />
+        />
 
     <TextView
         android:id="@+id/item_name"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_weight="1"
         android:text="@string/next"
-        style="@style/buttonMargin"/>
+        style="@style/TextViewMargin"/>
 
     <TextView
         android:id="@+id/item_score"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_weight="1"
         android:text="@string/next"
-        style="@style/buttonMargin"/>
+        android:layout_marginRight="90sp"/>
 
     <TextView
         android:id="@+id/item_totalTime"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_weight="1"
         android:text="TextView" />
 </LinearLayout>

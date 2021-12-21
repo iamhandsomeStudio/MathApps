@@ -72,7 +72,12 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
                 return -Integer.compare(Integer.parseInt(strings[1]),Integer.parseInt(t1[1]));
             }
         });*/
-        Collections.sort(stages,Collections.reverseOrder());
+        Collections.sort(stages, new Comparator<String[]>() {
+            @Override
+            public int compare(String[] strings, String[] t1) {
+                return -Integer.compare(Integer.parseInt(strings[1]),Integer.parseInt(t1[1]));
+            }
+        });
         //排名計算
         int stage = 0; //排名
         int preScore = -1; //前一次的分數
