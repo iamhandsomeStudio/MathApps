@@ -14,6 +14,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
+import android.media.MediaPlayer;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.CountDownTimer;
@@ -44,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
     ActionBar mainActionBar;
     Intent rankInt;
     File file;
+    MediaPlayer mp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +53,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);/*Test*/
 
         extra = getIntent().getExtras();
+        mp = MediaPlayer.create(MainActivity.this,R.raw.Robot_City_Quincas_Moreira);
+        mp.start();
 
         que1 = (TextView)findViewById(R.id.quesOne);
         que2 = (TextView)findViewById(R.id.quesTwo);
