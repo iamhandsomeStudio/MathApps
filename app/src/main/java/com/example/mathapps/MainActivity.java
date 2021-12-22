@@ -53,8 +53,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);/*Test*/
 
         extra = getIntent().getExtras();
-        mp = MediaPlayer.create(MainActivity.this,R.raw.Robot_City_Quincas_Moreira);
-        mp.start();
+        //mp = MediaPlayer.create(MainActivity.this,);
+
 
         que1 = (TextView)findViewById(R.id.quesOne);
         que2 = (TextView)findViewById(R.id.quesTwo);
