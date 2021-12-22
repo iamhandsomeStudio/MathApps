@@ -13,6 +13,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.res.AssetFileDescriptor;
+import android.content.res.AssetManager;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.media.MediaPlayer;
@@ -48,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
     Intent rankInt;
     File file;
     MediaPlayer mp;
+    private AssetManager assetManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,15 +58,16 @@ public class MainActivity extends AppCompatActivity {
 
         extra = getIntent().getExtras();
         try {
-            AssetFileDescriptor afd = getAssets().openFd("Robot City - Quincas Moreira.mp3");
+
             mp = new MediaPlayer();
+            AssetFileDescriptor afd = getResources().openRawResourceFd(R.raw.robot);
             mp.setDataSource(afd.getFileDescriptor(),afd.getStartOffset(),afd.getLength());
+            afd.close();
             mp.prepare();
             mp.start();
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
-
 
 
         que1 = (TextView)findViewById(R.id.quesOne);
@@ -756,6 +759,7 @@ public class MainActivity extends AppCompatActivity {
             btn10.setEnabled(true);
             btn11.setEnabled(true);
             btn12.setEnabled(true);
+
         }
 
     }
