@@ -26,7 +26,10 @@ import android.text.Html;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CompoundButton;
+import android.widget.Switch;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
@@ -49,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
     Intent rankInt;
     File file;
     MediaPlayer mp;
+    private Switch musicSwitch;
     private AssetManager assetManager;
 
     @Override
@@ -57,17 +61,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);/*Test*/
 
         extra = getIntent().getExtras();
-        try {
-
-            mp = new MediaPlayer();
-            AssetFileDescriptor afd = getResources().openRawResourceFd(R.raw.robot);
-            mp.setDataSource(afd.getFileDescriptor(),afd.getStartOffset(),afd.getLength());
-            afd.close();
-            mp.prepare();
-            mp.start();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        mp = new MediaPlayer();
 
 
         que1 = (TextView)findViewById(R.id.quesOne);
@@ -107,6 +101,9 @@ public class MainActivity extends AppCompatActivity {
         que6.setText(valueOf(y[5]));
 
         file = new File(getExternalFilesDir(null),"MathApp.csv");
+
+        musicSwitch = findViewById(R.id.switchMusic);
+        musicSwitch.setOnCheckedChangeListener(this::onCheckedChanged);
         /*if(!file.exists()){
             try{
                 BufferedWriter w_title = new BufferedWriter(new FileWriter(file,true));
@@ -777,5 +774,38 @@ public class MainActivity extends AppCompatActivity {
 
         final  AlertDialog dialog1 = dialog.create();
         dialog1.show();
+    }
+
+    public void onCheckedChanged(CompoundButton compoundButton, boolean b){/*這一行*/
+        String state = null;
+        if(!compoundButton.isChecked()){
+            if(mp != null && mp.isPlaying()){
+                try {
+                    mp.stop();
+                    //mp.release();
+                    state = "關閉音樂";
+                }catch (Exception e){
+                    e.printStackTrace();
+                }
+            }
+        }else{
+            if(mp != null){
+                //mp.reset();
+                try {
+                    AssetFileDescriptor afd = getResources().openRawResourceFd(R.raw.robot);
+                    mp.setDataSource(afd.getFileDescriptor(),afd.getStartOffset(),afd.getLength());
+                    afd.close();
+                    mp.prepare();
+                    state = "開啟音樂";
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+                mp.start();
+            }else if(!mp.isPlaying()){
+                mp.start();
+            }
+
+        }
+        Toast.makeText(this, state, Toast.LENGTH_SHORT).show();
     }
 }
