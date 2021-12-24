@@ -781,7 +781,7 @@ public class MainActivity extends AppCompatActivity {
         if(!compoundButton.isChecked()){
             if(mp != null && mp.isPlaying()){
                 try {
-                    mp.stop();
+                    mp.pause();
                     //mp.release();
                     state = "關閉音樂";
                 }catch (Exception e){
@@ -806,6 +806,6 @@ public class MainActivity extends AppCompatActivity {
             }
 
         }
-        Toast.makeText(this, state, Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this, state, Toast.LENGTH_SHORT).show();
     }
 }
