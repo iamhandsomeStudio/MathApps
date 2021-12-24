@@ -26,6 +26,8 @@ import android.text.Html;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CompoundButton;
+import android.widget.Switch;
 import android.widget.TextView;
 
 import org.w3c.dom.Text;
@@ -50,24 +52,36 @@ public class MainActivity extends AppCompatActivity {
     File file;
     MediaPlayer mp;
     private AssetManager assetManager;
+    Switch sw;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);/*Test*/
 
-        extra = getIntent().getExtras();
-        try {
+        sw = (Switch)findViewById(R.id.switchMusic);
+        sw.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                try {
 
-            mp = new MediaPlayer();
-            AssetFileDescriptor afd = getResources().openRawResourceFd(R.raw.robot);
-            mp.setDataSource(afd.getFileDescriptor(),afd.getStartOffset(),afd.getLength());
-            afd.close();
-            mp.prepare();
-            mp.start();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+                    mp = new MediaPlayer();
+                    AssetFileDescriptor afd = getResources().openRawResourceFd(R.raw.robot);
+                    mp.setDataSource(afd.getFileDescriptor(),afd.getStartOffset(),afd.getLength());
+                    afd.close();
+                    mp.prepare();
+                    mp.start();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+                if(isChecked){
+                    mp.stop();
+                }
+            }
+        });
+
+        extra = getIntent().getExtras();
+
 
 
         que1 = (TextView)findViewById(R.id.quesOne);
