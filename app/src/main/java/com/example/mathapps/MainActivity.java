@@ -776,7 +776,7 @@ public class MainActivity extends AppCompatActivity {
         dialog1.show();
     }
 
-    public void onCheckedChanged(CompoundButton compoundButton, boolean b){
+    public void onCheckedChanged(CompoundButton compoundButton, boolean b){/*這一行*/
         String state = null;
         if(!compoundButton.isChecked()){
             if(mp != null && mp.isPlaying()){
