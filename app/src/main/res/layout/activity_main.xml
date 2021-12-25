@@ -362,7 +362,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="30dp"
             android:text="Time"
-            android:textColor="#F3E5F5"
+            android:textColor="@android:color/holo_red_dark"
             android:textSize="24sp" />
 
         <TextView
