@@ -104,6 +104,21 @@ public class MainActivity extends AppCompatActivity {
 
         musicSwitch = findViewById(R.id.switchMusic);
         musicSwitch.setOnCheckedChangeListener(this::onCheckedChanged);
+        musicSwitch.performClick();
+        /*if(mp != null){
+            //mp.reset();
+            try {
+                AssetFileDescriptor afd = getResources().openRawResourceFd(R.raw.robot);
+                mp.setDataSource(afd.getFileDescriptor(),afd.getStartOffset(),afd.getLength());
+                afd.close();
+                mp.prepare();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            mp.start();
+        }else if(!mp.isPlaying()){
+            mp.start();
+        }*/
         /*if(!file.exists()){
             try{
                 BufferedWriter w_title = new BufferedWriter(new FileWriter(file,true));
@@ -859,7 +874,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void onCheckedChanged(CompoundButton compoundButton, boolean b){/*這一行*/
         String state = null;
-        if(!compoundButton.isChecked()){
+        if(!b){
             if(mp != null && mp.isPlaying()){
                 try {
                     mp.pause();
@@ -888,5 +903,14 @@ public class MainActivity extends AppCompatActivity {
 
         }
         //Toast.makeText(this, state, Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if(mp != null && mp.isPlaying()) {
+            mp.stop();
+            mp.release();
+        }
     }
 }

@@ -121,10 +121,10 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
         public ViewHolder(@NonNull View v) {
             super(v);
             itemView = v;
-            stage = itemView.findViewById(R.id.item_stage);
-            name = itemView.findViewById(R.id.item_name);
-            score = itemView.findViewById(R.id.item_score);
-            totalTime = itemView.findViewById(R.id.item_totalTime);
+            stage = v.findViewById(R.id.item_stage);
+            name = v.findViewById(R.id.item_name);
+            score = v.findViewById(R.id.item_score);
+            totalTime = v.findViewById(R.id.item_totalTime);
             //different = itemView.findViewById(R.id.different_text);
         }
     }
