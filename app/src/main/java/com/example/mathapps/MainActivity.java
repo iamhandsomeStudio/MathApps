@@ -242,6 +242,7 @@ public class MainActivity extends AppCompatActivity {
                     if(y[i] < 2 ){
                         y[i]++;
                     }
+
                     for(int j=0; j < i;j++){
                         if(y[j]==y[i] || y[i] <= 1){
                             i--;
