@@ -163,74 +163,154 @@ public class MainActivity extends AppCompatActivity {
 
     public void ansRandom(){
         if(extra.getString("dif").equals("一")){
-            for(int i=0;i<6;i++){
-                y[i] = (int)(Math.random()*20+1);
-                if(y[i] < 2 ){
-                    y[i]++;
+            if(extra.getString("ex").equals("加法")){
+                for(int i=0;i<6;i++){
+                    y[i] = (int)(Math.random()*20+1);
+                    if(y[i] < 2 ){
+                        y[i]++;
+                    }
+                    for(int j=0; j < i;j++){
+                        if(y[j]==y[i]){
+                            i--;
+                            break;
+                        }
+                    }
                 }
-                for(int j=0; j < i;j++){
-                    if(y[j]==y[i]){
-                        i--;
-                        break;
+            }else if(extra.getString("ex").equals("減法")){
+                for(int i=0;i<6;i++){
+                    y[i] = (int)(Math.random()*19+1);
+                    if(y[i] < 2 ){
+                        y[i]++;
+                    }
+                    for(int j=0; j < i;j++){
+                        if(y[j]==y[i]){
+                            i--;
+                            break;
+                        }
                     }
                 }
             }
+
         }
         if(extra.getString("dif").equals("二")){
-            for(int i=0;i<6;i++){
-                y[i] = (int)(Math.random()*80+1);
-                if(y[i] < 2 ){
-                    y[i]++;
+            if(extra.getString("ex").equals("加法")){
+                for(int i=0;i<6;i++){
+                    y[i] = (int)(Math.random()*40+1);
+                    if(y[i] < 2 ){
+                        y[i]++;
+                    }
+                    for(int j=0; j < i;j++){
+                        if(y[j]==y[i] || y[i] <= 1){
+                            i--;
+                            break;
+                        }
+                    }
                 }
-                for(int j=0; j < i;j++){
-                    if(y[j]==y[i] || y[i] <= 1){
-                        i--;
-                        break;
+            }else if(extra.getString("ex").equals("減法")){
+                for(int i=0;i<6;i++){
+                    y[i] = (int)(Math.random()*39+1);
+                    if(y[i] < 2 ){
+                        y[i]++;
+                    }
+                    for(int j=0; j < i;j++){
+                        if(y[j]==y[i] || y[i] <= 1){
+                            i--;
+                            break;
+                        }
                     }
                 }
             }
+
         }
         if(extra.getString("dif").equals("三")){
-            for(int i=0;i<6;i++){
-                y[i] = (int)(Math.random()*120+1);
-                if(y[i] < 2 ){
-                    y[i]++;
+            if(extra.getString("ex").equals("加法")){
+                for(int i=0;i<6;i++){
+                    y[i] = (int)(Math.random()*60+1);
+                    if(y[i] < 2 ){
+                        y[i]++;
+                    }
+                    for(int j=0; j < i;j++){
+                        if(y[j]==y[i] || y[i] <= 1){
+                            i--;
+                            break;
+                        }
+                    }
                 }
-                for(int j=0; j < i;j++){
-                    if(y[j]==y[i] || y[i] <= 1){
-                        i--;
-                        break;
+            }else if(extra.getString("ex").equals("減法")){
+                for(int i=0;i<6;i++){
+                    y[i] = (int)(Math.random()*59+1);
+                    if(y[i] < 2 ){
+                        y[i]++;
+                    }
+                    for(int j=0; j < i;j++){
+                        if(y[j]==y[i] || y[i] <= 1){
+                            i--;
+                            break;
+                        }
                     }
                 }
             }
+
         }
         if(extra.getString("dif").equals("四")){
-            for(int i=0;i<6;i++){
-                y[i] = (int)(Math.random()*160+1);
-                if(y[i] < 2 ){
-                    y[i]++;
+            if(extra.getString("ex").equals("加法")){
+                for(int i=0;i<6;i++){
+                    y[i] = (int)(Math.random()*80+1);
+                    if(y[i] < 2 ){
+                        y[i]++;
+                    }
+                    for(int j=0; j < i;j++){
+                        if(y[j]==y[i] || y[i] <= 1){
+                            i--;
+                            break;
+                        }
+                    }
                 }
-                for(int j=0; j < i;j++){
-                    if(y[j]==y[i] || y[i] <= 1){
-                        i--;
-                        break;
+            }else if(extra.getString("ex").equals("減法")){
+                for(int i=0;i<6;i++){
+                    y[i] = (int)(Math.random()*79+1);
+                    if(y[i] < 2 ){
+                        y[i]++;
+                    }
+                    for(int j=0; j < i;j++){
+                        if(y[j]==y[i] || y[i] <= 1){
+                            i--;
+                            break;
+                        }
                     }
                 }
             }
+
         }
         if(extra.getString("dif").equals("五")){
-            for(int i=0;i<6;i++){
-                y[i] = (int)(Math.random()*200+1);
-                if(y[i] < 2 ){
-                    y[i]++;
+            if(extra.getString("ex").equals("加法")){
+                for(int i=0;i<6;i++){
+                    y[i] = (int)(Math.random()*100+1);
+                    if(y[i] < 2 ){
+                        y[i]++;
+                    }
+                    for(int j=0; j < i;j++){
+                        if(y[j]==y[i] || y[i] <= 1){
+                            i--;
+                            break;
+                        }
+                    }
                 }
-                for(int j=0; j < i;j++){
-                    if(y[j]==y[i] || y[i] <= 1){
-                        i--;
-                        break;
+            }else if(extra.getString("ex").equals("減法")){
+                for(int i=0;i<6;i++){
+                    y[i] = (int)(Math.random()*99+1);
+                    if(y[i] < 2 ){
+                        y[i]++;
+                    }
+                    for(int j=0; j < i;j++){
+                        if(y[j]==y[i] || y[i] <= 1){
+                            i--;
+                            break;
+                        }
                     }
                 }
             }
+
         }
 
     }
@@ -421,42 +501,42 @@ public class MainActivity extends AppCompatActivity {
             scoreText.setText(String.valueOf(score));
         }else if(extra.getString("ex").equals("減法")){
             sub = Math.abs(sub) - a;
-            if(y[0] == Math.abs(sub) && count == 2){
+            if(y[0] == Math.abs(sub) && count == 2 && !que1.getText().equals("完成")){
                 que1.setText("完成");
                 score += 10;
                 sub = 0;
                 count = 0;
                 btnColor();
                 btn_SW();
-            }else if(y[1] == Math.abs(sub) && count == 2){
+            }else if(y[1] == Math.abs(sub) && count == 2 && !que2.getText().equals("完成")){
                 que2.setText("完成");
                 score += 10;
                 sub = 0;
                 count = 0;
                 btnColor();
                 btn_SW();
-            }else if(y[2] == Math.abs(sub) && count == 2){
+            }else if(y[2] == Math.abs(sub) && count == 2 && !que3.getText().equals("完成")){
                 que3.setText("完成");
                 score += 10;
                 sub = 0;
                 count = 0;
                 btnColor();
                 btn_SW();
-            }else if(y[3] == Math.abs(sub) && count == 2){
+            }else if(y[3] == Math.abs(sub) && count == 2 && !que4.getText().equals("完成")){
                 que4.setText("完成");
                 score += 10;
                 sub = 0;
                 count = 0;
                 btnColor();
                 btn_SW();
-            }else if(y[4] == Math.abs(sub) && count == 2){
+            }else if(y[4] == Math.abs(sub) && count == 2 && !que5.getText().equals("完成")){
                 que5.setText("完成");
                 score += 10;
                 sub = 0;
                 count = 0;
                 btnColor();
                 btn_SW();
-            }else if(y[5] == Math.abs(sub) && count == 2){
+            }else if(y[5] == Math.abs(sub) && count == 2 && !que6.getText().equals("完成")){
                 que6.setText("完成");
                 score += 10;
                 sub = 0;
@@ -614,16 +694,16 @@ public class MainActivity extends AppCompatActivity {
                     if (x[i] <= 0) {
                         i--;
                     }else{
-                        z[i] = x[i] + y[i];
+                        z[i] = Math.abs(x[i]) + y[i];
                     }
                 }
                 dif = 1;
-                btn.setText(valueOf(x[0]));
-                btn2.setText(valueOf(x[1]));
-                btn3.setText(valueOf(x[2]));
-                btn4.setText(valueOf(x[3]));
-                btn5.setText(valueOf(x[4]));
-                btn6.setText(valueOf(x[5]));
+                btn.setText(valueOf(Math.abs(x[0])));
+                btn2.setText(valueOf(Math.abs(x[1])));
+                btn3.setText(valueOf(Math.abs(x[2])));
+                btn4.setText(valueOf(Math.abs(x[3])));
+                btn5.setText(valueOf(Math.abs(x[4])));
+                btn6.setText(valueOf(Math.abs(x[5])));
                 btn7.setText(valueOf(z[0]));
                 btn8.setText(valueOf(z[1]));
                 btn9.setText(valueOf(z[2]));
