@@ -353,7 +353,7 @@
             android:minHeight="32dp"
             android:text="音樂開關"
             android:textAlignment="textEnd"
-            android:textColor="#7C4DFF" />
+            android:textColor="@color/design_default_color_on_primary" />
 
         <TextView
             android:id="@+id/time"
@@ -362,7 +362,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="30dp"
             android:text="Time"
-            android:textColor="@android:color/holo_red_dark"
+            android:textColor="#FF6E40"
             android:textSize="24sp" />
 
         <TextView
