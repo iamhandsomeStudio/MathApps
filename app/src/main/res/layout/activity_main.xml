@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
-    android:background="@drawable/dog2"
+    android:background="@drawable/images6"
     android:orientation="horizontal"
     tools:context=".MainActivity">
 
@@ -14,7 +14,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="第一關\n  答案"
-        android:textColor="#FFD740"
+        android:textColor="@color/purple_500"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintEnd_toEndOf="parent"
@@ -47,7 +47,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/ques_one"
-                android:textColor="#5C1E05"
+                android:textColor="#000000"
                 android:textSize="24sp" />
 
             <TextView
@@ -55,7 +55,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="1"
-                android:textColor="#5C1E05"
+                android:textColor="#000000"
                 android:textSize="24sp"
                 tools:ignore="HardcodedText" />
         </LinearLayout>
@@ -70,7 +70,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/ques_two"
-                android:textColor="#5C1E05"
+                android:textColor="#000000"
                 android:textSize="24sp" />
 
             <TextView
@@ -78,7 +78,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="1"
-                android:textColor="#5C1E05"
+                android:textColor="#000000"
                 android:textSize="24sp" />
         </LinearLayout>
 
@@ -92,7 +92,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/ques_three"
-                android:textColor="#5C1E05"
+                android:textColor="#000000"
                 android:textSize="24sp" />
 
             <TextView
@@ -100,7 +100,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="1"
-                android:textColor="#5C1E05"
+                android:textColor="#000000"
                 android:textSize="24sp" />
         </LinearLayout>
 
@@ -114,7 +114,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/ques_four"
-                android:textColor="#5C1E05"
+                android:textColor="#000000"
                 android:textSize="24sp" />
 
             <TextView
@@ -122,7 +122,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="1"
-                android:textColor="#5C1E05"
+                android:textColor="#000000"
                 android:textSize="24sp" />
         </LinearLayout>
 
@@ -136,7 +136,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/ques_five"
-                android:textColor="#5C1E05"
+                android:textColor="#000000"
                 android:textSize="24sp" />
 
             <TextView
@@ -144,7 +144,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="1"
-                android:textColor="#5C1E05"
+                android:textColor="#000000"
                 android:textSize="24sp" />
         </LinearLayout>
 
@@ -158,7 +158,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/ques_six"
-                android:textColor="#5C1E05"
+                android:textColor="#000000"
                 android:textSize="24sp" />
 
             <TextView
@@ -166,22 +166,23 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="1"
-                android:textColor="#5C1E05"
+                android:textColor="#000000"
                 android:textSize="24sp" />
         </LinearLayout>
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
+        android:layout_width="419dp"
+        android:layout_height="406dp"
         android:layout_gravity="center"
         android:layout_weight="1"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.52">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -191,7 +192,7 @@
 
             <Button
                 android:id="@+id/oneButton"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:backgroundTint="#F6EB08"
                 android:onClick="click"
@@ -339,7 +340,7 @@
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.977"
+        app:layout_constraintHorizontal_bias="0.973"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/linearLayout"
         app:layout_constraintVertical_bias="0.0">
@@ -348,12 +349,11 @@
             android:id="@+id/switchMusic"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:checked="true"
             android:minHeight="32dp"
-            android:checked="false"
             android:text="音樂開關"
             android:textAlignment="textEnd"
-            android:textColor="#7C4DFF"
-            tools:ignore="HardcodedText,UseSwitchCompatOrMaterialXml" />
+            android:textColor="#7C4DFF" />
 
         <TextView
             android:id="@+id/time"
@@ -380,7 +380,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="45dp"
-            android:layout_marginTop="90dp"
+            android:layout_marginTop="50dp"
             android:onClick="next"
             android:text="開始" />
 

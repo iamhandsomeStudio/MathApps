@@ -95,7 +95,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
             }
 
             //stageData.add(String.valueOf(stage));
-            System.out.println(stage);
+            //System.out.println(stage);
         }
         holder.stage.setText(stageData.get(position));
         holder.name.setText(stages.get(position)[0]);
