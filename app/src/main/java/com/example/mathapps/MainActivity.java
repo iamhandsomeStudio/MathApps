@@ -598,7 +598,7 @@ public class MainActivity extends AppCompatActivity {
             }
             if(extra.getString("dif").equals("二")){
                 for(int i = 0; i < y.length; i++){
-                    x[i] = y[i] - (int) (Math.random() * 40 + 1);
+                    x[i] = y[i] - (int) (Math.random() * 20 + 1);
                     if (x[i] <= 0) {
                         i--;
                     }else{
@@ -621,7 +621,7 @@ public class MainActivity extends AppCompatActivity {
             }
             if(extra.getString("dif").equals("三")){
                 for(int i = 0; i < y.length; i++){
-                    x[i] = y[i] - (int) (Math.random() * 60 + 1);
+                    x[i] = y[i] - (int) (Math.random() * 30 + 1);
                     if (x[i] <= 0) {
                         i--;
                     }else{
@@ -644,7 +644,7 @@ public class MainActivity extends AppCompatActivity {
             }
             if(extra.getString("dif").equals("四")){
                 for(int i = 0; i < y.length; i++){
-                    x[i] = y[i] - (int) (Math.random() * 80 + 1);
+                    x[i] = y[i] - (int) (Math.random() * 40 + 1);
                     if (x[i] <= 0) {
                         i--;
                     }else{
@@ -667,7 +667,7 @@ public class MainActivity extends AppCompatActivity {
             }
             if(extra.getString("dif").equals("五")){
                 for(int i = 0; i < y.length; i++){
-                    x[i] = y[i] - (int) (Math.random() * 100 + 1);
+                    x[i] = y[i] - (int) (Math.random() * 50 + 1);
                     if (x[i] <= 0) {
                         i--;
                     }else{
@@ -714,7 +714,7 @@ public class MainActivity extends AppCompatActivity {
             }
             if(extra.getString("dif").equals("二")){
                 for(int i = 0; i < y.length; i++){
-                    x[i] = (int) (Math.random() * 80 + 1) - y[i];
+                    x[i] = (int) (Math.random() * 40 + 1) - y[i];
                     if (x[i] <= 0) {
                         i--;
                     }else{
@@ -737,7 +737,7 @@ public class MainActivity extends AppCompatActivity {
             }
             if(extra.getString("dif").equals("三")){
                 for(int i = 0; i < y.length; i++){
-                    x[i] = (int) (Math.random() * 120 + 1) - y[i];
+                    x[i] = (int) (Math.random() * 60 + 1) - y[i];
                     if (x[i] <= 0) {
                         i--;
                     }else{
@@ -760,7 +760,7 @@ public class MainActivity extends AppCompatActivity {
             }
             if(extra.getString("dif").equals("四")){
                 for(int i = 0; i < y.length; i++){
-                    x[i] = (int) (Math.random() * 160 + 1) - y[i];
+                    x[i] = (int) (Math.random() * 80 + 1) - y[i];
                     if (x[i] <= 0) {
                         i--;
                     }else{
@@ -783,7 +783,7 @@ public class MainActivity extends AppCompatActivity {
             }
             if(extra.getString("dif").equals("五")){
                 for(int i = 0; i < y.length; i++){
-                    x[i] = (int) (Math.random() * 200 + 1) - y[i];
+                    x[i] = (int) (Math.random() * 100 + 1) - y[i];
                     if (x[i] <= 0) {
                         i--;
                     }else{
