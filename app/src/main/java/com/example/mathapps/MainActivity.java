@@ -913,4 +913,13 @@ public class MainActivity extends AppCompatActivity {
             mp.release();
         }
     }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        if(mp != null && mp.isPlaying()) {
+            mp.stop();
+            mp.release();
+        }
+    }
 }
