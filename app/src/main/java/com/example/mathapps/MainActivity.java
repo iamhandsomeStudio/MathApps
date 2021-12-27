@@ -193,7 +193,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             }else if(extra.getString("ex").equals("減法")){
                 for(int i=0;i<6;i++){
-                    y[i] = (int)(Math.random()*19+1);
+                    y[i] = (int)(Math.random()*9+1);
                     if(y[i] < 2 ){
                         y[i]++;
                     }
@@ -591,10 +591,13 @@ public class MainActivity extends AppCompatActivity {
                 for(int i = 0; i < y.length; i++){
                     x[i] = y[i] - (int) (Math.random() * 10 + 1);
 
-                    if (x[i] <= 0) {
+                    if (x[i] <= 0 || x[i] > 10) {
                         i--;
                     }else{
                         z[i] = y[i] - x[i];
+                        if(z[i] > 10){
+                            i--;
+                        }
                     }
                 }
                 dif = 1;
@@ -706,7 +709,7 @@ public class MainActivity extends AppCompatActivity {
         }else if(extra.getString("ex").equals("減法")){
             if(extra.getString("dif").equals("一")){
                 for(int i = 0; i < y.length; i++){
-                    x[i] = (int) (Math.random() * 20 + 1) - y[i];
+                    x[i] = (int) (Math.random() * 10 + 1) - y[i];
                     if (x[i] <= 0) {
                         i--;
                     }else{
